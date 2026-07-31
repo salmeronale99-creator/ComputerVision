@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# VS Code
+.vscode/
+
+# Calibration cache (optional)
+*.npy
+
+# Logs
+logs/*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
+
