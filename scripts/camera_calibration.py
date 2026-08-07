@@ -122,12 +122,12 @@ ret, cameraMatrix, distCoeffs, rvecs, tvecs = cv2.calibrateCamera(
 # Save Calibration
 # -----------------------------------
 np.save(
-    os.path.join(BASE_DIR, "calibration", "cameraMatrix.npy"),
+    os.path.join(calibration_folder, "cameraMatrix.npy"),
     cameraMatrix,
 )
 
 np.save(
-    os.path.join(BASE_DIR, "calibration", "distCoeffs.npy"),
+    os.path.join(calibration_folder, "distCoeffs.npy"),
     distCoeffs,
 )
 
