@@ -17,6 +17,10 @@ SQUARE_SIZE = 0.0325
 # -----------------------------------
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+CAMERA ="module3"  ## <- Change to camera you are using
+
+calibration_folder = os.path.join(BASE_DIR, "calibration", CAMERA)
+
 image_folder = os.path.join(
     BASE_DIR,
     "calibration",
