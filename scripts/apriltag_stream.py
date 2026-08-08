@@ -16,8 +16,12 @@ import config
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+CAMERA = "ai_camera" # Change to camera name that is being used!!
+# ai_camera, module3, module3Wide
+
+
 TEMPLATE_FOLDER = os.path.join(BASE_DIR, "templates")
-CALIBRATION_FOLDER = os.path.join(BASE_DIR, "calibration")
+CALIBRATION_FOLDER = os.path.join(BASE_DIR, "calibration", CAMERA)
 LOG_FOLDER = os.path.join(BASE_DIR, "logs")
 
 os.makedirs(LOG_FOLDER, exist_ok=True)
@@ -59,7 +63,7 @@ app = Flask(
 
 camera_matrix = np.load(
     os.path.join(
-        CALIBRATION_FOLDER,
+        CALIBRATION_FOLDER, 
         "cameraMatrix.npy"
     )
 )

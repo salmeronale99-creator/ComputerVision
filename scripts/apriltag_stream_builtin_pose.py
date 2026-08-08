@@ -16,6 +16,10 @@ import config
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+
+CAMERA = "module3" # Change to camera name that is being used!!
+# ai_camera, module3, module3Wide
+
 TEMPLATE_FOLDER = os.path.join(BASE_DIR, "templates")
 CALIBRATION_FOLDER = os.path.join(BASE_DIR, "calibration")
 LOG_FOLDER = os.path.join(BASE_DIR, "logs")
