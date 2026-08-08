@@ -22,35 +22,28 @@ CALIBRATION_FOLDER = os.path.join(
 )
 
 
+
 # ============================================================
-# LOAD IMX296 CAMERA CALIBRATION
+# LOAD MATLAB FISHEYE CALIBRATION
 # ============================================================
 
-camera_matrix = np.load(
-    os.path.join(
-        CALIBRATION_FOLDER,
-        "cameraMatrix.npy"
-    )
+from scipy.io import loadmat
+
+calibration_path = os.path.join(
+    CALIBRATION_FOLDER,
+    "opencv_rectification.mat"
 )
 
-dist_coeffs = np.load(
-    os.path.join(
-        CALIBRATION_FOLDER,
-        "distCoeffs.npy"
-    )
-)
+calibration = loadmat(calibration_path)
 
-print("IMX296 camera calibration loaded.")
+mapX = calibration["mapX_cv"].astype(np.float32)
+mapY = calibration["mapY_cv"].astype(np.float32)
 
-print()
-print("Camera Matrix:")
+camera_matrix = calibration["K"].astype(np.float64)
+
+print("MATLAB fisheye calibration loaded.")
+print("Camera matrix:")
 print(camera_matrix)
-
-print()
-print("Distortion Coefficients:")
-print(dist_coeffs)
-
-
 # ============================================================
 # FLASK
 # ============================================================
@@ -62,8 +55,8 @@ app = Flask(__name__)
 # CAMERA
 # ============================================================
 
-CAMERA_WIDTH = 1280
-CAMERA_HEIGHT = 720
+CAMERA_WIDTH = 1456
+CAMERA_HEIGHT = 1088  ## testing full resolution 
 
 picam2 = Picamera2()
 
@@ -107,9 +100,9 @@ print("AprilTag detector initialized.")
 # ============================================================
 
 # Physical width of detected AprilTag square:
-# 2.75 inches = 0.06985 meters
+# 3 inches = 0.0762 meters
 
-TAG_SIZE = 0.06985
+TAG_SIZE = 0.0762 
 
 half_size = TAG_SIZE / 2.0
 
@@ -176,6 +169,18 @@ def generate_frames():
                 continue
 
             frame = latest_frame.copy()
+        # ----------------------------------------------------
+        # CORRECT FISHEYE DISTORTION USING MATLAB CALIBRATION
+        # ----------------------------------------------------
+
+        frame = cv2.remap(
+            frame,
+            mapX,
+            mapY,
+            interpolation=cv2.INTER_LINEAR,
+            borderMode=cv2.BORDER_CONSTANT
+        )
+
 
 
         # ----------------------------------------------------
@@ -297,18 +302,8 @@ def generate_frames():
             # UNDISTORT APRILTAG CORNERS
             # -------------------------------------------------
 
-            undistorted_points = cv2.undistortPoints(
-                image_points,
-                camera_matrix,
-                dist_coeffs,
-                P=camera_matrix
-            )
+            
 
-            undistorted_points = (
-                undistorted_points
-                .reshape(-1, 2)
-                .astype(np.float32)
-            )
 
 
             # -------------------------------------------------
@@ -321,11 +316,11 @@ def generate_frames():
 
             success, rvec, tvec = cv2.solvePnP(
                 object_points,
-                undistorted_points,
+                image_points,
                 camera_matrix,
                 None,
                 flags=cv2.SOLVEPNP_ITERATIVE
-            )
+             ) 
 
 
             # =================================================
@@ -568,7 +563,7 @@ if __name__ == "__main__":
     print("----------------------------------------")
     print("IMX296 APRILTAG SERVER")
     print("----------------------------------------")
-    print("Camera resolution: 1280 x 720")
+    print("Camera resolution: ")
     print(f"AprilTag size: {TAG_SIZE:.5f} m")
     print("Open browser:")
     print("http://<raspberry_pi_ip>:5000")
