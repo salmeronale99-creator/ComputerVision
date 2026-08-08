@@ -16,7 +16,7 @@ import config
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-CAMERA = "ai_camera" # Change to camera name that is being used!!
+CAMERA = "module3" # Change to camera name that is being used!!
 # ai_camera, module3, module3Wide
 
 

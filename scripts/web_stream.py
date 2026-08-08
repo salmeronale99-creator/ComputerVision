@@ -9,6 +9,8 @@ import os
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CAMERA = "module3" ## Specify camera that is being used
+
 
 app = Flask(
     __name__,
@@ -27,7 +29,7 @@ config = picam2.create_preview_configuration(
 picam2.configure(config)
 picam2.start()
 
-SAVE_FOLDER = os.path.join(BASE_DIR, "calibration", "images")
+SAVE_FOLDER = os.path.join(BASE_DIR, "calibration", CAMERA, "images")
 
 os.makedirs(SAVE_FOLDER, exist_ok=True)
 
