@@ -102,7 +102,7 @@ print("AprilTag detector initialized.")
 # Physical width of detected AprilTag square:
 # 3 inches = 0.0762 meters
 
-TAG_SIZE = 0.0762 
+TAG_SIZE = 0.0720
 
 half_size = TAG_SIZE / 2.0
 
