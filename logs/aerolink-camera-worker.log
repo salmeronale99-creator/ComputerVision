@@ -1,0 +1,909 @@
+2026-11-17 16:02:24,505 INFO request 4e746ff0-8938-4d8c-9dd8-d7e5316e2f19 mode=active result=starting
+2026-11-17 16:02:25,963 INFO camera: MATLAB fisheye calibration loaded.
+2026-11-17 16:02:25,963 INFO camera: Camera matrix:
+2026-11-17 16:02:25,963 INFO camera: [[544.    0.  728.5]
+2026-11-17 16:02:25,963 INFO camera:  [  0.  544.  544.5]
+2026-11-17 16:02:25,963 INFO camera:  [  0.    0.    1. ]]
+2026-11-17 16:02:25,965 INFO camera: [0:01:35.164727392] [1663]  INFO Camera camera_manager.cpp:340 libcamera v0.7.2+rpt20260817
+2026-11-17 16:02:25,974 INFO camera: [0:01:35.173524630] [1671]  INFO RPI pisp.cpp:725 libpisp version v1.7.0 07-08-2026 (09:22:13)
+2026-11-17 16:02:25,982 INFO camera: [0:01:35.181489126] [1671]  INFO IPAProxy ipa_proxy.cpp:184 Using tuning file /usr/share/libcamera/ipa/rpi/pisp/imx296_mono.json
+2026-11-17 16:02:25,987 INFO camera: [0:01:35.186496188] [1671]  INFO Camera camera_manager.cpp:223 Adding camera '/base/axi/pcie@1000120000/rp1/i2c@88000/imx296@1a' for pipeline handler rpi/pisp
+2026-11-17 16:02:25,987 INFO camera: [0:01:35.186512464] [1671]  INFO RPI pisp.cpp:1186 Registered camera /base/axi/pcie@1000120000/rp1/i2c@88000/imx296@1a to CFE device /dev/media0 and ISP device /dev/media2 using PiSP variant BCM2712_D0
+2026-11-17 16:02:25,989 INFO camera: [0:01:35.188535353] [1671]  WARN V4L2 v4l2_pixelformat.cpp:346 Unsupported V4L2 pixel format Nc30
+2026-11-17 16:02:25,989 INFO camera: [0:01:35.188548277] [1671]  WARN V4L2 v4l2_pixelformat.cpp:346 Unsupported V4L2 pixel format Nc12
+2026-11-17 16:02:25,989 INFO camera: [0:01:35.189079645] [1663]  INFO Camera camera.cpp:1216 configuring streams: (0) 1456x1088-RGB888/Rec709/Rec709/None/Full (1) 1456x1088-MONO_PISP_COMP1/RAW
+2026-11-17 16:02:25,989 INFO camera: [0:01:35.189159358] [1671]  INFO RPI pisp.cpp:1502 Sensor: /base/axi/pcie@1000120000/rp1/i2c@88000/imx296@1a - Selected sensor format: 1456x1088-Y10_1X10/RAW - Selected CFE format: 1456x1088-PC1M/RAW/Linear/Rec601/Limited
+2026-11-17 16:02:27,029 INFO camera: IMX296 Global Shutter Camera started.
+2026-11-17 16:02:27,058 INFO camera: AprilTag detector initialized.
+2026-11-17 16:02:27,060 INFO camera: 
+2026-11-17 16:02:27,060 INFO camera: ----------------------------------------
+2026-11-17 16:02:27,060 INFO camera: IMX296 APRILTAG SERVER
+2026-11-17 16:02:27,060 INFO camera: ----------------------------------------
+2026-11-17 16:02:27,060 INFO camera: Camera resolution:
+2026-11-17 16:02:27,060 INFO camera: AprilTag size: 0.07200 m
+2026-11-17 16:02:27,060 INFO camera: Open browser:
+2026-11-17 16:02:27,060 INFO camera: http://<raspberry_pi_ip>:5000
+2026-11-17 16:02:27,060 INFO camera: ----------------------------------------
+2026-11-17 16:02:27,061 INFO camera:  * Serving Flask app 'apriltag_stream'
+2026-11-17 16:02:27,061 INFO camera:  * Debug mode: off
+2026-11-17 16:02:27,066 INFO camera: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2026-11-17 16:02:27,067 INFO camera:  * Running on all addresses (0.0.0.0)
+2026-11-17 16:02:27,067 INFO camera:  * Running on http://127.0.0.1:5000
+2026-11-17 16:02:27,067 INFO camera:  * Running on http://10.40.226.159:5000
+2026-11-17 16:02:27,067 INFO camera: [33mPress CTRL+C to quit[0m
+2026-11-17 16:02:27,320 INFO camera: 127.0.0.1 - - [17/Nov/2026 16:02:27] "GET /video_feed HTTP/1.1" 200 -
+2026-11-17 16:04:11,559 INFO camera: Tag width: 99.95 pixels
+2026-11-17 16:04:11,576 INFO camera: ID 0 | X=0.234 m | Y=-0.158 m | Z=0.361 m | Distance=0.458 m
+2026-11-17 16:04:11,637 INFO camera: Tag width: 112.64 pixels
+2026-11-17 16:04:11,637 INFO camera: ID 0 | X=0.192 m | Y=-0.110 m | Z=0.337 m | Distance=0.403 m
+2026-11-17 16:04:11,694 INFO camera: Tag width: 124.58 pixels
+2026-11-17 16:04:11,695 INFO camera: ID 0 | X=0.157 m | Y=-0.076 m | Z=0.312 m | Distance=0.357 m
+2026-11-17 16:04:11,757 INFO camera: Tag width: 134.48 pixels
+2026-11-17 16:04:11,757 INFO camera: ID 0 | X=0.126 m | Y=-0.054 m | Z=0.290 m | Distance=0.321 m
+2026-11-17 16:04:11,816 INFO camera: Tag width: 139.35 pixels
+2026-11-17 16:04:11,816 INFO camera: ID 0 | X=0.111 m | Y=-0.045 m | Z=0.280 m | Distance=0.305 m
+2026-11-17 16:04:11,876 INFO camera: Tag width: 147.26 pixels
+2026-11-17 16:04:11,876 INFO camera: ID 0 | X=0.084 m | Y=-0.028 m | Z=0.266 m | Distance=0.281 m
+2026-11-17 16:04:11,941 INFO camera: Tag width: 152.13 pixels
+2026-11-17 16:04:11,941 INFO camera: ID 0 | X=0.060 m | Y=-0.015 m | Z=0.258 m | Distance=0.266 m
+2026-11-17 16:04:12,002 INFO camera: Tag width: 155.17 pixels
+2026-11-17 16:04:12,002 INFO camera: ID 0 | X=0.039 m | Y=-0.005 m | Z=0.253 m | Distance=0.256 m
+2026-11-17 16:04:12,058 INFO camera: Tag width: 156.53 pixels
+2026-11-17 16:04:12,058 INFO camera: ID 0 | X=0.023 m | Y=0.004 m | Z=0.251 m | Distance=0.252 m
+2026-11-17 16:04:12,111 INFO camera: Tag width: 156.75 pixels
+2026-11-17 16:04:12,112 INFO camera: ID 0 | X=0.013 m | Y=0.010 m | Z=0.251 m | Distance=0.251 m
+2026-11-17 16:04:12,167 INFO camera: Tag width: 156.92 pixels
+2026-11-17 16:04:12,167 INFO camera: ID 0 | X=0.010 m | Y=0.012 m | Z=0.250 m | Distance=0.251 m
+2026-11-17 16:04:12,219 INFO camera: Tag width: 156.35 pixels
+2026-11-17 16:04:12,219 INFO camera: ID 0 | X=0.005 m | Y=0.016 m | Z=0.251 m | Distance=0.252 m
+2026-11-17 16:04:12,274 INFO camera: Tag width: 155.60 pixels
+2026-11-17 16:04:12,275 INFO camera: ID 0 | X=0.003 m | Y=0.017 m | Z=0.252 m | Distance=0.253 m
+2026-11-17 16:04:12,334 INFO camera: Tag width: 153.07 pixels
+2026-11-17 16:04:12,335 INFO camera: ID 0 | X=-0.003 m | Y=0.017 m | Z=0.256 m | Distance=0.257 m
+2026-11-17 16:04:12,390 INFO camera: Tag width: 151.73 pixels
+2026-11-17 16:04:12,390 INFO camera: ID 0 | X=-0.009 m | Y=0.014 m | Z=0.258 m | Distance=0.259 m
+2026-11-17 16:04:12,445 INFO camera: Tag width: 151.51 pixels
+2026-11-17 16:04:12,446 INFO camera: ID 0 | X=-0.012 m | Y=0.012 m | Z=0.259 m | Distance=0.259 m
+2026-11-17 16:04:12,506 INFO camera: Tag width: 150.99 pixels
+2026-11-17 16:04:12,507 INFO camera: ID 0 | X=-0.017 m | Y=0.007 m | Z=0.259 m | Distance=0.260 m
+2026-11-17 16:04:12,568 INFO camera: Tag width: 150.22 pixels
+2026-11-17 16:04:12,568 INFO camera: ID 0 | X=-0.021 m | Y=0.001 m | Z=0.260 m | Distance=0.261 m
+2026-11-17 16:04:12,627 INFO camera: Tag width: 149.64 pixels
+2026-11-17 16:04:12,627 INFO camera: ID 0 | X=-0.023 m | Y=-0.002 m | Z=0.261 m | Distance=0.262 m
+2026-11-17 16:04:12,684 INFO camera: Tag width: 149.39 pixels
+2026-11-17 16:04:12,685 INFO camera: ID 0 | X=-0.025 m | Y=-0.004 m | Z=0.260 m | Distance=0.262 m
+2026-11-17 16:04:12,744 INFO camera: Tag width: 149.32 pixels
+2026-11-17 16:04:12,745 INFO camera: ID 0 | X=-0.025 m | Y=-0.005 m | Z=0.260 m | Distance=0.262 m
+2026-11-17 16:04:12,803 INFO camera: Tag width: 149.28 pixels
+2026-11-17 16:04:12,803 INFO camera: ID 0 | X=-0.025 m | Y=-0.007 m | Z=0.260 m | Distance=0.261 m
+2026-11-17 16:04:12,861 INFO camera: Tag width: 148.80 pixels
+2026-11-17 16:04:12,861 INFO camera: ID 0 | X=-0.025 m | Y=-0.008 m | Z=0.261 m | Distance=0.263 m
+2026-11-17 16:04:12,918 INFO camera: Tag width: 147.58 pixels
+2026-11-17 16:04:12,918 INFO camera: ID 0 | X=-0.025 m | Y=-0.009 m | Z=0.263 m | Distance=0.265 m
+2026-11-17 16:04:12,976 INFO camera: Tag width: 146.78 pixels
+2026-11-17 16:04:12,977 INFO camera: ID 0 | X=-0.025 m | Y=-0.011 m | Z=0.264 m | Distance=0.266 m
+2026-11-17 16:04:13,031 INFO camera: Tag width: 146.28 pixels
+2026-11-17 16:04:13,031 INFO camera: ID 0 | X=-0.026 m | Y=-0.013 m | Z=0.265 m | Distance=0.266 m
+2026-11-17 16:04:13,084 INFO camera: Tag width: 147.25 pixels
+2026-11-17 16:04:13,085 INFO camera: ID 0 | X=-0.027 m | Y=-0.015 m | Z=0.264 m | Distance=0.265 m
+2026-11-17 16:04:13,141 INFO camera: Tag width: 147.96 pixels
+2026-11-17 16:04:13,142 INFO camera: ID 0 | X=-0.026 m | Y=-0.014 m | Z=0.262 m | Distance=0.264 m
+2026-11-17 16:04:13,201 INFO camera: Tag width: 148.31 pixels
+2026-11-17 16:04:13,202 INFO camera: ID 0 | X=-0.022 m | Y=-0.013 m | Z=0.262 m | Distance=0.263 m
+2026-11-17 16:04:13,258 INFO camera: Tag width: 148.77 pixels
+2026-11-17 16:04:13,258 INFO camera: ID 0 | X=-0.016 m | Y=-0.010 m | Z=0.262 m | Distance=0.262 m
+2026-11-17 16:04:13,315 INFO camera: Tag width: 149.28 pixels
+2026-11-17 16:04:13,315 INFO camera: ID 0 | X=-0.009 m | Y=-0.007 m | Z=0.261 m | Distance=0.261 m
+2026-11-17 16:04:13,371 INFO camera: Tag width: 149.83 pixels
+2026-11-17 16:04:13,371 INFO camera: ID 0 | X=-0.005 m | Y=-0.005 m | Z=0.260 m | Distance=0.260 m
+2026-11-17 16:04:13,428 INFO camera: Tag width: 150.98 pixels
+2026-11-17 16:04:13,429 INFO camera: ID 0 | X=0.002 m | Y=-0.001 m | Z=0.259 m | Distance=0.259 m
+2026-11-17 16:04:13,483 INFO camera: Tag width: 151.77 pixels
+2026-11-17 16:04:13,483 INFO camera: ID 0 | X=0.009 m | Y=0.001 m | Z=0.258 m | Distance=0.258 m
+2026-11-17 16:04:13,541 INFO camera: Tag width: 151.91 pixels
+2026-11-17 16:04:13,541 INFO camera: ID 0 | X=0.011 m | Y=0.002 m | Z=0.257 m | Distance=0.258 m
+2026-11-17 16:04:13,599 INFO camera: Tag width: 152.98 pixels
+2026-11-17 16:04:13,599 INFO camera: ID 0 | X=0.015 m | Y=0.003 m | Z=0.256 m | Distance=0.256 m
+2026-11-17 16:04:13,654 INFO camera: Tag width: 154.76 pixels
+2026-11-17 16:04:13,654 INFO camera: ID 0 | X=0.018 m | Y=0.004 m | Z=0.253 m | Distance=0.254 m
+2026-11-17 16:04:13,712 INFO camera: Tag width: 155.55 pixels
+2026-11-17 16:04:13,713 INFO camera: ID 0 | X=0.019 m | Y=0.005 m | Z=0.252 m | Distance=0.253 m
+2026-11-17 16:04:13,770 INFO camera: Tag width: 156.99 pixels
+2026-11-17 16:04:13,770 INFO camera: ID 0 | X=0.022 m | Y=0.007 m | Z=0.250 m | Distance=0.251 m
+2026-11-17 16:04:13,825 INFO camera: Tag width: 158.59 pixels
+2026-11-17 16:04:13,826 INFO camera: ID 0 | X=0.025 m | Y=0.009 m | Z=0.248 m | Distance=0.249 m
+2026-11-17 16:04:13,885 INFO camera: Tag width: 160.50 pixels
+2026-11-17 16:04:13,886 INFO camera: ID 0 | X=0.027 m | Y=0.011 m | Z=0.245 m | Distance=0.247 m
+2026-11-17 16:04:13,944 INFO camera: Tag width: 161.79 pixels
+2026-11-17 16:04:13,944 INFO camera: ID 0 | X=0.028 m | Y=0.012 m | Z=0.244 m | Distance=0.246 m
+2026-11-17 16:04:14,003 INFO camera: Tag width: 164.82 pixels
+2026-11-17 16:04:14,003 INFO camera: ID 0 | X=0.029 m | Y=0.014 m | Z=0.240 m | Distance=0.242 m
+2026-11-17 16:04:14,059 INFO camera: Tag width: 168.90 pixels
+2026-11-17 16:04:14,059 INFO camera: ID 0 | X=0.029 m | Y=0.015 m | Z=0.234 m | Distance=0.236 m
+2026-11-17 16:04:14,116 INFO camera: Tag width: 173.44 pixels
+2026-11-17 16:04:14,117 INFO camera: ID 0 | X=0.029 m | Y=0.016 m | Z=0.228 m | Distance=0.231 m
+2026-11-17 16:04:14,172 INFO camera: Tag width: 175.76 pixels
+2026-11-17 16:04:14,172 INFO camera: ID 0 | X=0.030 m | Y=0.016 m | Z=0.225 m | Distance=0.228 m
+2026-11-17 16:04:14,231 INFO camera: Tag width: 181.19 pixels
+2026-11-17 16:04:14,231 INFO camera: ID 0 | X=0.030 m | Y=0.017 m | Z=0.219 m | Distance=0.222 m
+2026-11-17 16:04:14,289 INFO camera: Tag width: 186.43 pixels
+2026-11-17 16:04:14,290 INFO camera: ID 0 | X=0.031 m | Y=0.019 m | Z=0.213 m | Distance=0.217 m
+2026-11-17 16:04:14,348 INFO camera: Tag width: 190.91 pixels
+2026-11-17 16:04:14,349 INFO camera: ID 0 | X=0.033 m | Y=0.021 m | Z=0.209 m | Distance=0.213 m
+2026-11-17 16:04:14,407 INFO camera: Tag width: 193.18 pixels
+2026-11-17 16:04:14,407 INFO camera: ID 0 | X=0.034 m | Y=0.022 m | Z=0.207 m | Distance=0.211 m
+2026-11-17 16:04:14,464 INFO camera: Tag width: 198.07 pixels
+2026-11-17 16:04:14,464 INFO camera: ID 0 | X=0.034 m | Y=0.024 m | Z=0.202 m | Distance=0.207 m
+2026-11-17 16:04:14,517 INFO camera: Tag width: 202.42 pixels
+2026-11-17 16:04:14,518 INFO camera: ID 0 | X=0.034 m | Y=0.025 m | Z=0.198 m | Distance=0.203 m
+2026-11-17 16:04:14,574 INFO camera: Tag width: 203.99 pixels
+2026-11-17 16:04:14,574 INFO camera: ID 0 | X=0.032 m | Y=0.025 m | Z=0.197 m | Distance=0.201 m
+2026-11-17 16:04:14,630 INFO camera: Tag width: 205.25 pixels
+2026-11-17 16:04:14,630 INFO camera: ID 0 | X=0.030 m | Y=0.023 m | Z=0.195 m | Distance=0.199 m
+2026-11-17 16:04:14,685 INFO camera: Tag width: 204.13 pixels
+2026-11-17 16:04:14,686 INFO camera: ID 0 | X=0.030 m | Y=0.021 m | Z=0.195 m | Distance=0.199 m
+2026-11-17 16:04:14,741 INFO camera: Tag width: 203.20 pixels
+2026-11-17 16:04:14,742 INFO camera: ID 0 | X=0.030 m | Y=0.019 m | Z=0.196 m | Distance=0.199 m
+2026-11-17 16:04:14,798 INFO camera: Tag width: 200.56 pixels
+2026-11-17 16:04:14,798 INFO camera: ID 0 | X=0.034 m | Y=0.017 m | Z=0.198 m | Distance=0.202 m
+2026-11-17 16:04:14,853 INFO camera: Tag width: 199.63 pixels
+2026-11-17 16:04:14,853 INFO camera: ID 0 | X=0.037 m | Y=0.015 m | Z=0.199 m | Distance=0.203 m
+2026-11-17 16:04:14,911 INFO camera: Tag width: 201.06 pixels
+2026-11-17 16:04:14,912 INFO camera: ID 0 | X=0.038 m | Y=0.015 m | Z=0.197 m | Distance=0.202 m
+2026-11-17 16:04:14,966 INFO camera: Tag width: 206.18 pixels
+2026-11-17 16:04:14,966 INFO camera: ID 0 | X=0.040 m | Y=0.018 m | Z=0.192 m | Distance=0.197 m
+2026-11-17 16:04:15,023 INFO camera: Tag width: 209.02 pixels
+2026-11-17 16:04:15,023 INFO camera: ID 0 | X=0.039 m | Y=0.021 m | Z=0.190 m | Distance=0.195 m
+2026-11-17 16:04:15,078 INFO camera: Tag width: 210.29 pixels
+2026-11-17 16:04:15,078 INFO camera: ID 0 | X=0.039 m | Y=0.022 m | Z=0.189 m | Distance=0.194 m
+2026-11-17 16:04:15,137 INFO camera: Tag width: 214.25 pixels
+2026-11-17 16:04:15,137 INFO camera: ID 0 | X=0.037 m | Y=0.027 m | Z=0.186 m | Distance=0.191 m
+2026-11-17 16:04:15,199 INFO camera: Tag width: 217.39 pixels
+2026-11-17 16:04:15,199 INFO camera: ID 0 | X=0.037 m | Y=0.032 m | Z=0.184 m | Distance=0.190 m
+2026-11-17 16:04:15,256 INFO camera: Tag width: 220.32 pixels
+2026-11-17 16:04:15,257 INFO camera: ID 0 | X=0.040 m | Y=0.038 m | Z=0.182 m | Distance=0.191 m
+2026-11-17 16:04:15,315 INFO camera: Tag width: 220.23 pixels
+2026-11-17 16:04:15,315 INFO camera: ID 0 | X=0.044 m | Y=0.042 m | Z=0.183 m | Distance=0.193 m
+2026-11-17 16:04:15,371 INFO camera: Tag width: 221.42 pixels
+2026-11-17 16:04:15,371 INFO camera: ID 0 | X=0.046 m | Y=0.046 m | Z=0.182 m | Distance=0.193 m
+2026-11-17 16:04:15,430 INFO camera: Tag width: 225.57 pixels
+2026-11-17 16:04:15,430 INFO camera: ID 0 | X=0.051 m | Y=0.053 m | Z=0.180 m | Distance=0.195 m
+2026-11-17 16:04:15,486 INFO camera: Tag width: 231.08 pixels
+2026-11-17 16:04:15,487 INFO camera: ID 0 | X=0.055 m | Y=0.059 m | Z=0.178 m | Distance=0.195 m
+2026-11-17 16:04:15,542 INFO camera: Tag width: 233.56 pixels
+2026-11-17 16:04:15,542 INFO camera: ID 0 | X=0.056 m | Y=0.060 m | Z=0.176 m | Distance=0.194 m
+2026-11-17 16:04:15,599 INFO camera: Tag width: 237.83 pixels
+2026-11-17 16:04:15,600 INFO camera: ID 0 | X=0.056 m | Y=0.061 m | Z=0.172 m | Distance=0.191 m
+2026-11-17 16:04:15,714 INFO camera: Tag width: 245.68 pixels
+2026-11-17 16:04:15,714 INFO camera: ID 0 | X=0.048 m | Y=0.059 m | Z=0.167 m | Distance=0.183 m
+2026-11-17 16:04:15,773 INFO camera: Tag width: 246.83 pixels
+2026-11-17 16:04:15,773 INFO camera: ID 0 | X=0.045 m | Y=0.058 m | Z=0.165 m | Distance=0.181 m
+2026-11-17 16:04:15,837 INFO camera: Tag width: 249.11 pixels
+2026-11-17 16:04:15,837 INFO camera: ID 0 | X=0.039 m | Y=0.058 m | Z=0.163 m | Distance=0.177 m
+2026-11-17 16:04:15,900 INFO camera: Tag width: 252.31 pixels
+2026-11-17 16:04:15,901 INFO camera: ID 0 | X=0.033 m | Y=0.059 m | Z=0.162 m | Distance=0.175 m
+2026-11-17 16:04:15,960 INFO camera: Tag width: 256.59 pixels
+2026-11-17 16:04:15,961 INFO camera: ID 0 | X=0.025 m | Y=0.059 m | Z=0.160 m | Distance=0.172 m
+2026-11-17 16:04:16,013 INFO camera: Tag width: 260.04 pixels
+2026-11-17 16:04:16,013 INFO camera: ID 0 | X=0.017 m | Y=0.058 m | Z=0.158 m | Distance=0.169 m
+2026-11-17 16:04:16,070 INFO camera: Tag width: 261.19 pixels
+2026-11-17 16:04:16,070 INFO camera: ID 0 | X=0.013 m | Y=0.057 m | Z=0.157 m | Distance=0.167 m
+2026-11-17 16:04:16,129 INFO camera: Tag width: 260.84 pixels
+2026-11-17 16:04:16,130 INFO camera: ID 0 | X=0.005 m | Y=0.052 m | Z=0.156 m | Distance=0.164 m
+2026-11-17 16:04:16,185 INFO camera: Tag width: 259.58 pixels
+2026-11-17 16:04:16,186 INFO camera: ID 0 | X=-0.000 m | Y=0.047 m | Z=0.156 m | Distance=0.162 m
+2026-11-17 16:04:16,242 INFO camera: Tag width: 258.42 pixels
+2026-11-17 16:04:16,243 INFO camera: ID 0 | X=-0.002 m | Y=0.045 m | Z=0.156 m | Distance=0.162 m
+2026-11-17 16:04:16,298 INFO camera: Tag width: 256.42 pixels
+2026-11-17 16:04:16,298 INFO camera: ID 0 | X=-0.004 m | Y=0.041 m | Z=0.157 m | Distance=0.162 m
+2026-11-17 16:04:16,357 INFO camera: Tag width: 253.52 pixels
+2026-11-17 16:04:16,358 INFO camera: ID 0 | X=-0.007 m | Y=0.036 m | Z=0.158 m | Distance=0.162 m
+2026-11-17 16:04:16,412 INFO camera: Tag width: 248.81 pixels
+2026-11-17 16:04:16,412 INFO camera: ID 0 | X=-0.011 m | Y=0.032 m | Z=0.160 m | Distance=0.163 m
+2026-11-17 16:04:16,466 INFO camera: Tag width: 246.09 pixels
+2026-11-17 16:04:16,467 INFO camera: ID 0 | X=-0.013 m | Y=0.030 m | Z=0.161 m | Distance=0.164 m
+2026-11-17 16:04:16,519 INFO camera: Tag width: 240.46 pixels
+2026-11-17 16:04:16,519 INFO camera: ID 0 | X=-0.016 m | Y=0.028 m | Z=0.165 m | Distance=0.168 m
+2026-11-17 16:04:16,575 INFO camera: Tag width: 237.41 pixels
+2026-11-17 16:04:16,575 INFO camera: ID 0 | X=-0.017 m | Y=0.029 m | Z=0.167 m | Distance=0.170 m
+2026-11-17 16:04:16,631 INFO camera: Tag width: 229.87 pixels
+2026-11-17 16:04:16,631 INFO camera: ID 0 | X=-0.018 m | Y=0.031 m | Z=0.172 m | Distance=0.176 m
+2026-11-17 16:04:16,686 INFO camera: Tag width: 222.60 pixels
+2026-11-17 16:04:16,687 INFO camera: ID 0 | X=-0.020 m | Y=0.036 m | Z=0.178 m | Distance=0.182 m
+2026-11-17 16:04:16,748 INFO camera: Tag width: 220.16 pixels
+2026-11-17 16:04:16,749 INFO camera: ID 0 | X=-0.020 m | Y=0.039 m | Z=0.180 m | Distance=0.185 m
+2026-11-17 16:04:16,806 INFO camera: Tag width: 215.82 pixels
+2026-11-17 16:04:16,807 INFO camera: ID 0 | X=-0.022 m | Y=0.042 m | Z=0.184 m | Distance=0.190 m
+2026-11-17 16:04:16,861 INFO camera: Tag width: 212.64 pixels
+2026-11-17 16:04:16,861 INFO camera: ID 0 | X=-0.024 m | Y=0.045 m | Z=0.187 m | Distance=0.193 m
+2026-11-17 16:04:16,919 INFO camera: Tag width: 209.40 pixels
+2026-11-17 16:04:16,920 INFO camera: ID 0 | X=-0.027 m | Y=0.047 m | Z=0.189 m | Distance=0.197 m
+2026-11-17 16:04:16,981 INFO camera: Tag width: 208.07 pixels
+2026-11-17 16:04:16,981 INFO camera: ID 0 | X=-0.028 m | Y=0.047 m | Z=0.191 m | Distance=0.199 m
+2026-11-17 16:04:17,037 INFO camera: Tag width: 205.67 pixels
+2026-11-17 16:04:17,037 INFO camera: ID 0 | X=-0.032 m | Y=0.047 m | Z=0.193 m | Distance=0.201 m
+2026-11-17 16:04:17,099 INFO camera: Tag width: 204.27 pixels
+2026-11-17 16:04:17,099 INFO camera: ID 0 | X=-0.034 m | Y=0.045 m | Z=0.194 m | Distance=0.202 m
+2026-11-17 16:04:17,158 INFO camera: Tag width: 204.82 pixels
+2026-11-17 16:04:17,159 INFO camera: ID 0 | X=-0.035 m | Y=0.044 m | Z=0.194 m | Distance=0.202 m
+2026-11-17 16:04:17,216 INFO camera: Tag width: 206.59 pixels
+2026-11-17 16:04:17,216 INFO camera: ID 0 | X=-0.035 m | Y=0.045 m | Z=0.192 m | Distance=0.201 m
+2026-11-17 16:04:17,273 INFO camera: Tag width: 207.86 pixels
+2026-11-17 16:04:17,273 INFO camera: ID 0 | X=-0.035 m | Y=0.046 m | Z=0.191 m | Distance=0.200 m
+2026-11-17 16:04:17,331 INFO camera: Tag width: 210.36 pixels
+2026-11-17 16:04:17,332 INFO camera: ID 0 | X=-0.033 m | Y=0.048 m | Z=0.190 m | Distance=0.199 m
+2026-11-17 16:04:17,388 INFO camera: Tag width: 211.28 pixels
+2026-11-17 16:04:17,389 INFO camera: ID 0 | X=-0.032 m | Y=0.047 m | Z=0.189 m | Distance=0.197 m
+2026-11-17 16:04:17,449 INFO camera: Tag width: 208.36 pixels
+2026-11-17 16:04:17,449 INFO camera: ID 0 | X=-0.036 m | Y=0.038 m | Z=0.191 m | Distance=0.197 m
+2026-11-17 16:04:17,509 INFO camera: Tag width: 207.33 pixels
+2026-11-17 16:04:17,509 INFO camera: ID 0 | X=-0.038 m | Y=0.031 m | Z=0.191 m | Distance=0.197 m
+2026-11-17 16:04:17,562 INFO camera: Tag width: 206.90 pixels
+2026-11-17 16:04:17,563 INFO camera: ID 0 | X=-0.041 m | Y=0.020 m | Z=0.190 m | Distance=0.196 m
+2026-11-17 16:04:17,617 INFO camera: Tag width: 207.51 pixels
+2026-11-17 16:04:17,617 INFO camera: ID 0 | X=-0.042 m | Y=0.011 m | Z=0.189 m | Distance=0.194 m
+2026-11-17 16:04:17,672 INFO camera: Tag width: 208.45 pixels
+2026-11-17 16:04:17,672 INFO camera: ID 0 | X=-0.041 m | Y=0.007 m | Z=0.188 m | Distance=0.193 m
+2026-11-17 16:04:17,728 INFO camera: Tag width: 209.31 pixels
+2026-11-17 16:04:17,728 INFO camera: ID 0 | X=-0.039 m | Y=0.000 m | Z=0.187 m | Distance=0.191 m
+2026-11-17 16:04:17,783 INFO camera: Tag width: 210.33 pixels
+2026-11-17 16:04:17,783 INFO camera: ID 0 | X=-0.035 m | Y=-0.004 m | Z=0.187 m | Distance=0.190 m
+2026-11-17 16:04:17,843 INFO camera: Tag width: 210.78 pixels
+2026-11-17 16:04:17,844 INFO camera: ID 0 | X=-0.033 m | Y=-0.004 m | Z=0.186 m | Distance=0.189 m
+2026-11-17 16:04:17,900 INFO camera: Tag width: 213.09 pixels
+2026-11-17 16:04:17,900 INFO camera: ID 0 | X=-0.030 m | Y=-0.006 m | Z=0.184 m | Distance=0.186 m
+2026-11-17 16:04:17,956 INFO camera: Tag width: 216.44 pixels
+2026-11-17 16:04:17,957 INFO camera: ID 0 | X=-0.027 m | Y=-0.009 m | Z=0.181 m | Distance=0.183 m
+2026-11-17 16:04:18,011 INFO camera: Tag width: 219.08 pixels
+2026-11-17 16:04:18,011 INFO camera: ID 0 | X=-0.026 m | Y=-0.013 m | Z=0.179 m | Distance=0.181 m
+2026-11-17 16:04:18,067 INFO camera: Tag width: 219.88 pixels
+2026-11-17 16:04:18,067 INFO camera: ID 0 | X=-0.025 m | Y=-0.015 m | Z=0.178 m | Distance=0.180 m
+2026-11-17 16:04:18,123 INFO camera: Tag width: 221.32 pixels
+2026-11-17 16:04:18,124 INFO camera: ID 0 | X=-0.024 m | Y=-0.020 m | Z=0.177 m | Distance=0.179 m
+2026-11-17 16:04:18,177 INFO camera: Tag width: 223.42 pixels
+2026-11-17 16:04:18,178 INFO camera: ID 0 | X=-0.024 m | Y=-0.023 m | Z=0.175 m | Distance=0.178 m
+2026-11-17 16:04:18,289 INFO camera: Tag width: 229.52 pixels
+2026-11-17 16:04:18,290 INFO camera: ID 0 | X=-0.025 m | Y=-0.025 m | Z=0.170 m | Distance=0.174 m
+2026-11-17 16:04:18,439 INFO camera: Tag width: 239.57 pixels
+2026-11-17 16:04:18,439 INFO camera: ID 0 | X=-0.029 m | Y=-0.021 m | Z=0.163 m | Distance=0.167 m
+2026-11-17 16:04:18,495 INFO camera: Tag width: 242.33 pixels
+2026-11-17 16:04:18,496 INFO camera: ID 0 | X=-0.030 m | Y=-0.015 m | Z=0.161 m | Distance=0.165 m
+2026-11-17 16:04:18,551 INFO camera: Tag width: 240.60 pixels
+2026-11-17 16:04:18,551 INFO camera: ID 0 | X=-0.031 m | Y=-0.011 m | Z=0.163 m | Distance=0.166 m
+2026-11-17 16:04:18,608 INFO camera: Tag width: 239.41 pixels
+2026-11-17 16:04:18,608 INFO camera: ID 0 | X=-0.031 m | Y=-0.008 m | Z=0.164 m | Distance=0.167 m
+2026-11-17 16:04:18,660 INFO camera: Tag width: 238.76 pixels
+2026-11-17 16:04:18,660 INFO camera: ID 0 | X=-0.031 m | Y=-0.005 m | Z=0.164 m | Distance=0.167 m
+2026-11-17 16:04:18,718 INFO camera: Tag width: 240.20 pixels
+2026-11-17 16:04:18,718 INFO camera: ID 0 | X=-0.030 m | Y=-0.001 m | Z=0.163 m | Distance=0.166 m
+2026-11-17 16:04:18,770 INFO camera: Tag width: 240.48 pixels
+2026-11-17 16:04:18,770 INFO camera: ID 0 | X=-0.030 m | Y=0.000 m | Z=0.163 m | Distance=0.166 m
+2026-11-17 16:04:18,828 INFO camera: Tag width: 240.66 pixels
+2026-11-17 16:04:18,829 INFO camera: ID 0 | X=-0.030 m | Y=0.002 m | Z=0.163 m | Distance=0.166 m
+2026-11-17 16:04:18,885 INFO camera: Tag width: 243.21 pixels
+2026-11-17 16:04:18,885 INFO camera: ID 0 | X=-0.030 m | Y=0.004 m | Z=0.161 m | Distance=0.164 m
+2026-11-17 16:04:18,944 INFO camera: Tag width: 244.78 pixels
+2026-11-17 16:04:18,944 INFO camera: ID 0 | X=-0.030 m | Y=0.005 m | Z=0.160 m | Distance=0.163 m
+2026-11-17 16:04:18,999 INFO camera: Tag width: 246.15 pixels
+2026-11-17 16:04:18,999 INFO camera: ID 0 | X=-0.030 m | Y=0.007 m | Z=0.160 m | Distance=0.163 m
+2026-11-17 16:04:19,051 INFO camera: Tag width: 243.46 pixels
+2026-11-17 16:04:19,052 INFO camera: ID 0 | X=-0.030 m | Y=0.009 m | Z=0.161 m | Distance=0.164 m
+2026-11-17 16:04:19,105 INFO camera: Tag width: 242.03 pixels
+2026-11-17 16:04:19,105 INFO camera: ID 0 | X=-0.030 m | Y=0.009 m | Z=0.162 m | Distance=0.165 m
+2026-11-17 16:04:19,159 INFO camera: Tag width: 240.30 pixels
+2026-11-17 16:04:19,159 INFO camera: ID 0 | X=-0.030 m | Y=0.009 m | Z=0.164 m | Distance=0.167 m
+2026-11-17 16:04:19,214 INFO camera: Tag width: 239.65 pixels
+2026-11-17 16:04:19,214 INFO camera: ID 0 | X=-0.031 m | Y=0.009 m | Z=0.164 m | Distance=0.167 m
+2026-11-17 16:04:19,270 INFO camera: Tag width: 239.36 pixels
+2026-11-17 16:04:19,270 INFO camera: ID 0 | X=-0.031 m | Y=0.010 m | Z=0.164 m | Distance=0.167 m
+2026-11-17 16:04:19,327 INFO camera: Tag width: 238.47 pixels
+2026-11-17 16:04:19,328 INFO camera: ID 0 | X=-0.031 m | Y=0.010 m | Z=0.165 m | Distance=0.168 m
+2026-11-17 16:04:19,378 INFO camera: Tag width: 237.14 pixels
+2026-11-17 16:04:19,378 INFO camera: ID 0 | X=-0.032 m | Y=0.012 m | Z=0.166 m | Distance=0.169 m
+2026-11-17 16:04:19,435 INFO camera: Tag width: 236.12 pixels
+2026-11-17 16:04:19,436 INFO camera: ID 0 | X=-0.032 m | Y=0.012 m | Z=0.167 m | Distance=0.170 m
+2026-11-17 16:04:19,488 INFO camera: Tag width: 235.36 pixels
+2026-11-17 16:04:19,488 INFO camera: ID 0 | X=-0.032 m | Y=0.013 m | Z=0.167 m | Distance=0.171 m
+2026-11-17 16:04:19,543 INFO camera: Tag width: 235.48 pixels
+2026-11-17 16:04:19,543 INFO camera: ID 0 | X=-0.032 m | Y=0.013 m | Z=0.167 m | Distance=0.171 m
+2026-11-17 16:04:19,597 INFO camera: Tag width: 235.78 pixels
+2026-11-17 16:04:19,598 INFO camera: ID 0 | X=-0.032 m | Y=0.013 m | Z=0.167 m | Distance=0.170 m
+2026-11-17 16:04:19,647 INFO camera: Tag width: 237.02 pixels
+2026-11-17 16:04:19,647 INFO camera: ID 0 | X=-0.032 m | Y=0.013 m | Z=0.166 m | Distance=0.169 m
+2026-11-17 16:04:19,701 INFO camera: Tag width: 237.96 pixels
+2026-11-17 16:04:19,701 INFO camera: ID 0 | X=-0.032 m | Y=0.013 m | Z=0.165 m | Distance=0.169 m
+2026-11-17 16:04:19,754 INFO camera: Tag width: 240.21 pixels
+2026-11-17 16:04:19,754 INFO camera: ID 0 | X=-0.032 m | Y=0.012 m | Z=0.164 m | Distance=0.167 m
+2026-11-17 16:04:19,810 INFO camera: Tag width: 241.91 pixels
+2026-11-17 16:04:19,810 INFO camera: ID 0 | X=-0.032 m | Y=0.012 m | Z=0.162 m | Distance=0.166 m
+2026-11-17 16:04:19,864 INFO camera: Tag width: 242.68 pixels
+2026-11-17 16:04:19,865 INFO camera: ID 0 | X=-0.031 m | Y=0.012 m | Z=0.162 m | Distance=0.165 m
+2026-11-17 16:04:19,924 INFO camera: Tag width: 243.41 pixels
+2026-11-17 16:04:19,925 INFO camera: ID 0 | X=-0.031 m | Y=0.012 m | Z=0.162 m | Distance=0.165 m
+2026-11-17 16:04:19,976 INFO camera: Tag width: 242.78 pixels
+2026-11-17 16:04:19,976 INFO camera: ID 0 | X=-0.031 m | Y=0.013 m | Z=0.162 m | Distance=0.165 m
+2026-11-17 16:04:20,036 INFO camera: Tag width: 242.93 pixels
+2026-11-17 16:04:20,036 INFO camera: ID 0 | X=-0.031 m | Y=0.013 m | Z=0.162 m | Distance=0.165 m
+2026-11-17 16:04:20,090 INFO camera: Tag width: 245.76 pixels
+2026-11-17 16:04:20,091 INFO camera: ID 0 | X=-0.032 m | Y=0.014 m | Z=0.160 m | Distance=0.164 m
+2026-11-17 16:04:20,144 INFO camera: Tag width: 249.47 pixels
+2026-11-17 16:04:20,144 INFO camera: ID 0 | X=-0.033 m | Y=0.014 m | Z=0.158 m | Distance=0.162 m
+2026-11-17 16:04:20,197 INFO camera: Tag width: 251.62 pixels
+2026-11-17 16:04:20,197 INFO camera: ID 0 | X=-0.034 m | Y=0.015 m | Z=0.156 m | Distance=0.161 m
+2026-11-17 16:04:20,249 INFO camera: Tag width: 257.11 pixels
+2026-11-17 16:04:20,250 INFO camera: ID 0 | X=-0.034 m | Y=0.014 m | Z=0.153 m | Distance=0.157 m
+2026-11-17 16:04:20,307 INFO camera: Tag width: 259.32 pixels
+2026-11-17 16:04:20,307 INFO camera: ID 0 | X=-0.034 m | Y=0.012 m | Z=0.152 m | Distance=0.156 m
+2026-11-17 16:04:20,360 INFO camera: Tag width: 261.86 pixels
+2026-11-17 16:04:20,360 INFO camera: ID 0 | X=-0.033 m | Y=0.010 m | Z=0.150 m | Distance=0.154 m
+2026-11-17 16:04:20,418 INFO camera: Tag width: 261.88 pixels
+2026-11-17 16:04:20,419 INFO camera: ID 0 | X=-0.032 m | Y=0.007 m | Z=0.150 m | Distance=0.153 m
+2026-11-17 16:04:20,531 INFO camera: Tag width: 255.03 pixels
+2026-11-17 16:04:20,532 INFO camera: ID 0 | X=-0.032 m | Y=0.004 m | Z=0.154 m | Distance=0.157 m
+2026-11-17 16:04:20,582 INFO camera: Tag width: 249.06 pixels
+2026-11-17 16:04:20,582 INFO camera: ID 0 | X=-0.032 m | Y=0.003 m | Z=0.157 m | Distance=0.161 m
+2026-11-17 16:04:20,637 INFO camera: Tag width: 246.45 pixels
+2026-11-17 16:04:20,637 INFO camera: ID 0 | X=-0.031 m | Y=0.003 m | Z=0.159 m | Distance=0.162 m
+2026-11-17 16:04:20,695 INFO camera: Tag width: 244.15 pixels
+2026-11-17 16:04:20,695 INFO camera: ID 0 | X=-0.030 m | Y=0.004 m | Z=0.161 m | Distance=0.164 m
+2026-11-17 16:04:20,749 INFO camera: Tag width: 244.62 pixels
+2026-11-17 16:04:20,749 INFO camera: ID 0 | X=-0.029 m | Y=0.004 m | Z=0.160 m | Distance=0.163 m
+2026-11-17 16:04:20,805 INFO camera: Tag width: 245.55 pixels
+2026-11-17 16:04:20,805 INFO camera: ID 0 | X=-0.027 m | Y=0.004 m | Z=0.160 m | Distance=0.162 m
+2026-11-17 16:04:20,860 INFO camera: Tag width: 247.35 pixels
+2026-11-17 16:04:20,861 INFO camera: ID 0 | X=-0.024 m | Y=0.005 m | Z=0.159 m | Distance=0.160 m
+2026-11-17 16:04:20,918 INFO camera: Tag width: 250.84 pixels
+2026-11-17 16:04:20,918 INFO camera: ID 0 | X=-0.021 m | Y=0.006 m | Z=0.156 m | Distance=0.158 m
+2026-11-17 16:04:20,974 INFO camera: Tag width: 253.86 pixels
+2026-11-17 16:04:20,974 INFO camera: ID 0 | X=-0.020 m | Y=0.006 m | Z=0.155 m | Distance=0.156 m
+2026-11-17 16:04:21,032 INFO camera: Tag width: 258.73 pixels
+2026-11-17 16:04:21,032 INFO camera: ID 0 | X=-0.017 m | Y=0.008 m | Z=0.152 m | Distance=0.153 m
+2026-11-17 16:04:21,085 INFO camera: Tag width: 260.56 pixels
+2026-11-17 16:04:21,085 INFO camera: ID 0 | X=-0.015 m | Y=0.010 m | Z=0.151 m | Distance=0.152 m
+2026-11-17 16:04:21,142 INFO camera: Tag width: 260.73 pixels
+2026-11-17 16:04:21,142 INFO camera: ID 0 | X=-0.013 m | Y=0.011 m | Z=0.151 m | Distance=0.152 m
+2026-11-17 16:04:21,197 INFO camera: Tag width: 261.05 pixels
+2026-11-17 16:04:21,198 INFO camera: ID 0 | X=-0.012 m | Y=0.013 m | Z=0.151 m | Distance=0.152 m
+2026-11-17 16:04:21,249 INFO camera: Tag width: 263.10 pixels
+2026-11-17 16:04:21,249 INFO camera: ID 0 | X=-0.012 m | Y=0.013 m | Z=0.150 m | Distance=0.151 m
+2026-11-17 16:04:21,302 INFO camera: Tag width: 264.12 pixels
+2026-11-17 16:04:21,303 INFO camera: ID 0 | X=-0.013 m | Y=0.013 m | Z=0.149 m | Distance=0.150 m
+2026-11-17 16:04:21,357 INFO camera: Tag width: 263.65 pixels
+2026-11-17 16:04:21,358 INFO camera: ID 0 | X=-0.013 m | Y=0.011 m | Z=0.149 m | Distance=0.150 m
+2026-11-17 16:04:21,421 INFO camera: Tag width: 261.15 pixels
+2026-11-17 16:04:21,422 INFO camera: ID 0 | X=-0.014 m | Y=0.009 m | Z=0.150 m | Distance=0.151 m
+2026-11-17 16:04:21,476 INFO camera: Tag width: 257.35 pixels
+2026-11-17 16:04:21,476 INFO camera: ID 0 | X=-0.014 m | Y=0.006 m | Z=0.153 m | Distance=0.153 m
+2026-11-17 16:04:21,529 INFO camera: Tag width: 255.50 pixels
+2026-11-17 16:04:21,529 INFO camera: ID 0 | X=-0.015 m | Y=0.005 m | Z=0.154 m | Distance=0.154 m
+2026-11-17 16:04:21,583 INFO camera: Tag width: 254.02 pixels
+2026-11-17 16:04:21,583 INFO camera: ID 0 | X=-0.014 m | Y=0.005 m | Z=0.154 m | Distance=0.155 m
+2026-11-17 16:04:21,638 INFO camera: Tag width: 253.66 pixels
+2026-11-17 16:04:21,639 INFO camera: ID 0 | X=-0.013 m | Y=0.006 m | Z=0.155 m | Distance=0.155 m
+2026-11-17 16:04:21,697 INFO camera: Tag width: 251.70 pixels
+2026-11-17 16:04:21,697 INFO camera: ID 0 | X=-0.011 m | Y=0.007 m | Z=0.156 m | Distance=0.157 m
+2026-11-17 16:04:21,751 INFO camera: Tag width: 247.19 pixels
+2026-11-17 16:04:21,752 INFO camera: ID 0 | X=-0.010 m | Y=0.007 m | Z=0.159 m | Distance=0.159 m
+2026-11-17 16:04:21,805 INFO camera: Tag width: 243.76 pixels
+2026-11-17 16:04:21,805 INFO camera: ID 0 | X=-0.010 m | Y=0.006 m | Z=0.161 m | Distance=0.161 m
+2026-11-17 16:04:21,861 INFO camera: Tag width: 236.47 pixels
+2026-11-17 16:04:21,861 INFO camera: ID 0 | X=-0.010 m | Y=0.006 m | Z=0.166 m | Distance=0.166 m
+2026-11-17 16:04:21,919 INFO camera: Tag width: 230.63 pixels
+2026-11-17 16:04:21,919 INFO camera: ID 0 | X=-0.011 m | Y=0.007 m | Z=0.170 m | Distance=0.171 m
+2026-11-17 16:04:21,971 INFO camera: Tag width: 228.28 pixels
+2026-11-17 16:04:21,972 INFO camera: ID 0 | X=-0.011 m | Y=0.007 m | Z=0.172 m | Distance=0.172 m
+2026-11-17 16:04:22,028 INFO camera: Tag width: 222.99 pixels
+2026-11-17 16:04:22,028 INFO camera: ID 0 | X=-0.012 m | Y=0.007 m | Z=0.176 m | Distance=0.177 m
+2026-11-17 16:04:22,087 INFO camera: Tag width: 218.62 pixels
+2026-11-17 16:04:22,088 INFO camera: ID 0 | X=-0.010 m | Y=0.006 m | Z=0.179 m | Distance=0.180 m
+2026-11-17 16:04:22,143 INFO camera: Tag width: 215.64 pixels
+2026-11-17 16:04:22,144 INFO camera: ID 0 | X=-0.007 m | Y=0.001 m | Z=0.182 m | Distance=0.182 m
+2026-11-17 16:04:22,200 INFO camera: Tag width: 214.98 pixels
+2026-11-17 16:04:22,200 INFO camera: ID 0 | X=-0.006 m | Y=-0.002 m | Z=0.182 m | Distance=0.182 m
+2026-11-17 16:04:22,260 INFO camera: Tag width: 213.02 pixels
+2026-11-17 16:04:22,260 INFO camera: ID 0 | X=-0.006 m | Y=-0.009 m | Z=0.183 m | Distance=0.183 m
+2026-11-17 16:04:22,370 INFO camera: Tag width: 211.74 pixels
+2026-11-17 16:04:22,371 INFO camera: ID 0 | X=-0.007 m | Y=-0.017 m | Z=0.183 m | Distance=0.184 m
+2026-11-17 16:04:23,584 INFO camera: Tag width: 194.79 pixels
+2026-11-17 16:04:23,585 INFO camera: ID 0 | X=-0.022 m | Y=-0.032 m | Z=0.194 m | Distance=0.198 m
+2026-11-17 16:04:23,705 INFO camera: Tag width: 170.53 pixels
+2026-11-17 16:04:23,705 INFO camera: ID 0 | X=-0.005 m | Y=-0.035 m | Z=0.222 m | Distance=0.225 m
+2026-11-17 16:04:23,878 INFO camera: Tag width: 156.32 pixels
+2026-11-17 16:04:23,878 INFO camera: ID 0 | X=0.027 m | Y=-0.053 m | Z=0.243 m | Distance=0.250 m
+2026-11-17 16:04:23,934 INFO camera: Tag width: 155.16 pixels
+2026-11-17 16:04:23,934 INFO camera: ID 0 | X=0.030 m | Y=-0.053 m | Z=0.245 m | Distance=0.252 m
+2026-11-17 16:04:23,994 INFO camera: Tag width: 152.61 pixels
+2026-11-17 16:04:23,995 INFO camera: ID 0 | X=0.034 m | Y=-0.052 m | Z=0.250 m | Distance=0.258 m
+2026-11-17 16:04:24,060 INFO camera: Tag width: 150.59 pixels
+2026-11-17 16:04:24,060 INFO camera: ID 0 | X=0.032 m | Y=-0.051 m | Z=0.255 m | Distance=0.262 m
+2026-11-17 16:04:24,120 INFO camera: Tag width: 150.10 pixels
+2026-11-17 16:04:24,121 INFO camera: ID 0 | X=0.026 m | Y=-0.055 m | Z=0.255 m | Distance=0.262 m
+2026-11-17 16:04:24,183 INFO camera: Tag width: 151.75 pixels
+2026-11-17 16:04:24,183 INFO camera: ID 0 | X=0.020 m | Y=-0.057 m | Z=0.251 m | Distance=0.259 m
+2026-11-17 16:04:24,241 INFO camera: Tag width: 152.60 pixels
+2026-11-17 16:04:24,241 INFO camera: ID 0 | X=0.017 m | Y=-0.057 m | Z=0.250 m | Distance=0.257 m
+2026-11-17 16:04:24,302 INFO camera: Tag width: 153.95 pixels
+2026-11-17 16:04:24,303 INFO camera: ID 0 | X=0.011 m | Y=-0.056 m | Z=0.248 m | Distance=0.254 m
+2026-11-17 16:04:24,364 INFO camera: Tag width: 154.81 pixels
+2026-11-17 16:04:24,364 INFO camera: ID 0 | X=0.006 m | Y=-0.054 m | Z=0.246 m | Distance=0.252 m
+2026-11-17 16:04:24,428 INFO camera: Tag width: 156.54 pixels
+2026-11-17 16:04:24,428 INFO camera: ID 0 | X=0.003 m | Y=-0.049 m | Z=0.244 m | Distance=0.248 m
+2026-11-17 16:04:24,486 INFO camera: Tag width: 161.82 pixels
+2026-11-17 16:04:24,486 INFO camera: ID 0 | X=-0.000 m | Y=-0.041 m | Z=0.236 m | Distance=0.240 m
+2026-11-17 16:04:24,542 INFO camera: Tag width: 171.82 pixels
+2026-11-17 16:04:24,542 INFO camera: ID 0 | X=-0.005 m | Y=-0.033 m | Z=0.223 m | Distance=0.226 m
+2026-11-17 16:04:24,598 INFO camera: Tag width: 177.99 pixels
+2026-11-17 16:04:24,598 INFO camera: ID 0 | X=-0.008 m | Y=-0.030 m | Z=0.216 m | Distance=0.218 m
+2026-11-17 16:04:24,656 INFO camera: Tag width: 190.57 pixels
+2026-11-17 16:04:24,656 INFO camera: ID 0 | X=-0.013 m | Y=-0.026 m | Z=0.201 m | Distance=0.203 m
+2026-11-17 16:04:26,557 INFO camera: Tag width: 203.88 pixels
+2026-11-17 16:04:26,557 INFO camera: ID 0 | X=-0.019 m | Y=-0.048 m | Z=0.186 m | Distance=0.194 m
+2026-11-17 16:04:27,432 INFO camera: Tag width: 176.94 pixels
+2026-11-17 16:04:27,433 INFO camera: ID 0 | X=-0.016 m | Y=-0.049 m | Z=0.217 m | Distance=0.223 m
+2026-11-17 16:04:27,493 INFO camera: Tag width: 174.71 pixels
+2026-11-17 16:04:27,493 INFO camera: ID 0 | X=-0.016 m | Y=-0.048 m | Z=0.220 m | Distance=0.226 m
+2026-11-17 16:04:27,549 INFO camera: Tag width: 173.14 pixels
+2026-11-17 16:04:27,550 INFO camera: ID 0 | X=-0.016 m | Y=-0.048 m | Z=0.222 m | Distance=0.228 m
+2026-11-17 16:04:27,608 INFO camera: Tag width: 172.71 pixels
+2026-11-17 16:04:27,609 INFO camera: ID 0 | X=-0.016 m | Y=-0.049 m | Z=0.222 m | Distance=0.228 m
+2026-11-17 16:04:27,668 INFO camera: Tag width: 173.09 pixels
+2026-11-17 16:04:27,668 INFO camera: ID 0 | X=-0.016 m | Y=-0.049 m | Z=0.222 m | Distance=0.228 m
+2026-11-17 16:04:27,728 INFO camera: Tag width: 172.92 pixels
+2026-11-17 16:04:27,729 INFO camera: ID 0 | X=-0.016 m | Y=-0.050 m | Z=0.222 m | Distance=0.228 m
+2026-11-17 16:04:27,783 INFO camera: Tag width: 171.70 pixels
+2026-11-17 16:04:27,783 INFO camera: ID 0 | X=-0.015 m | Y=-0.050 m | Z=0.224 m | Distance=0.230 m
+2026-11-17 16:04:27,839 INFO camera: Tag width: 170.98 pixels
+2026-11-17 16:04:27,840 INFO camera: ID 0 | X=-0.014 m | Y=-0.051 m | Z=0.225 m | Distance=0.231 m
+2026-11-17 16:04:27,899 INFO camera: Tag width: 170.25 pixels
+2026-11-17 16:04:27,899 INFO camera: ID 0 | X=-0.013 m | Y=-0.051 m | Z=0.226 m | Distance=0.232 m
+2026-11-17 16:04:27,959 INFO camera: Tag width: 169.95 pixels
+2026-11-17 16:04:27,959 INFO camera: ID 0 | X=-0.011 m | Y=-0.051 m | Z=0.226 m | Distance=0.232 m
+2026-11-17 16:04:28,075 INFO camera: Tag width: 170.19 pixels
+2026-11-17 16:04:28,075 INFO camera: ID 0 | X=-0.009 m | Y=-0.051 m | Z=0.226 m | Distance=0.232 m
+2026-11-17 16:04:28,133 INFO camera: Tag width: 170.06 pixels
+2026-11-17 16:04:28,133 INFO camera: ID 0 | X=-0.008 m | Y=-0.051 m | Z=0.226 m | Distance=0.232 m
+2026-11-17 16:04:28,306 INFO camera: Tag width: 170.01 pixels
+2026-11-17 16:04:28,307 INFO camera: ID 0 | X=-0.006 m | Y=-0.052 m | Z=0.226 m | Distance=0.232 m
+2026-11-17 16:04:28,366 INFO camera: Tag width: 170.15 pixels
+2026-11-17 16:04:28,367 INFO camera: ID 0 | X=-0.005 m | Y=-0.052 m | Z=0.226 m | Distance=0.232 m
+2026-11-17 16:04:28,424 INFO camera: Tag width: 170.48 pixels
+2026-11-17 16:04:28,425 INFO camera: ID 0 | X=-0.004 m | Y=-0.052 m | Z=0.226 m | Distance=0.232 m
+2026-11-17 16:04:28,483 INFO camera: Tag width: 170.79 pixels
+2026-11-17 16:04:28,483 INFO camera: ID 0 | X=-0.003 m | Y=-0.052 m | Z=0.225 m | Distance=0.231 m
+2026-11-17 16:04:28,542 INFO camera: Tag width: 170.62 pixels
+2026-11-17 16:04:28,542 INFO camera: ID 0 | X=-0.003 m | Y=-0.052 m | Z=0.225 m | Distance=0.231 m
+2026-11-17 16:04:28,601 INFO camera: Tag width: 169.97 pixels
+2026-11-17 16:04:28,601 INFO camera: ID 0 | X=-0.002 m | Y=-0.053 m | Z=0.226 m | Distance=0.232 m
+2026-11-17 16:04:28,659 INFO camera: Tag width: 169.50 pixels
+2026-11-17 16:04:28,660 INFO camera: ID 0 | X=-0.002 m | Y=-0.053 m | Z=0.227 m | Distance=0.233 m
+2026-11-17 16:04:28,718 INFO camera: Tag width: 169.32 pixels
+2026-11-17 16:04:28,719 INFO camera: ID 0 | X=-0.002 m | Y=-0.054 m | Z=0.227 m | Distance=0.233 m
+2026-11-17 16:04:28,776 INFO camera: Tag width: 169.04 pixels
+2026-11-17 16:04:28,776 INFO camera: ID 0 | X=-0.001 m | Y=-0.054 m | Z=0.228 m | Distance=0.234 m
+2026-11-17 16:04:28,835 INFO camera: Tag width: 168.81 pixels
+2026-11-17 16:04:28,835 INFO camera: ID 0 | X=-0.001 m | Y=-0.054 m | Z=0.228 m | Distance=0.234 m
+2026-11-17 16:04:28,892 INFO camera: Tag width: 169.06 pixels
+2026-11-17 16:04:28,893 INFO camera: ID 0 | X=-0.000 m | Y=-0.054 m | Z=0.227 m | Distance=0.234 m
+2026-11-17 16:04:28,952 INFO camera: Tag width: 169.42 pixels
+2026-11-17 16:04:28,953 INFO camera: ID 0 | X=0.000 m | Y=-0.055 m | Z=0.227 m | Distance=0.233 m
+2026-11-17 16:04:29,012 INFO camera: Tag width: 169.60 pixels
+2026-11-17 16:04:29,013 INFO camera: ID 0 | X=0.001 m | Y=-0.055 m | Z=0.227 m | Distance=0.233 m
+2026-11-17 16:04:29,071 INFO camera: Tag width: 169.67 pixels
+2026-11-17 16:04:29,071 INFO camera: ID 0 | X=0.002 m | Y=-0.054 m | Z=0.227 m | Distance=0.233 m
+2026-11-17 16:04:29,129 INFO camera: Tag width: 169.82 pixels
+2026-11-17 16:04:29,129 INFO camera: ID 0 | X=0.004 m | Y=-0.054 m | Z=0.227 m | Distance=0.233 m
+2026-11-17 16:04:29,190 INFO camera: Tag width: 169.80 pixels
+2026-11-17 16:04:29,190 INFO camera: ID 0 | X=0.006 m | Y=-0.053 m | Z=0.227 m | Distance=0.233 m
+2026-11-17 16:04:29,251 INFO camera: Tag width: 169.80 pixels
+2026-11-17 16:04:29,251 INFO camera: ID 0 | X=0.008 m | Y=-0.053 m | Z=0.226 m | Distance=0.233 m
+2026-11-17 16:04:29,311 INFO camera: Tag width: 169.59 pixels
+2026-11-17 16:04:29,311 INFO camera: ID 0 | X=0.010 m | Y=-0.054 m | Z=0.227 m | Distance=0.233 m
+2026-11-17 16:04:29,419 INFO camera: Tag width: 169.32 pixels
+2026-11-17 16:04:29,421 INFO camera: ID 0 | X=0.011 m | Y=-0.054 m | Z=0.227 m | Distance=0.234 m
+2026-11-17 16:04:29,481 INFO camera: Tag width: 169.16 pixels
+2026-11-17 16:04:29,482 INFO camera: ID 0 | X=0.015 m | Y=-0.055 m | Z=0.227 m | Distance=0.234 m
+2026-11-17 16:04:29,540 INFO camera: Tag width: 169.45 pixels
+2026-11-17 16:04:29,540 INFO camera: ID 0 | X=0.016 m | Y=-0.055 m | Z=0.227 m | Distance=0.234 m
+2026-11-17 16:04:29,598 INFO camera: Tag width: 169.70 pixels
+2026-11-17 16:04:29,598 INFO camera: ID 0 | X=0.017 m | Y=-0.056 m | Z=0.226 m | Distance=0.234 m
+2026-11-17 16:04:29,713 INFO camera: Tag width: 169.70 pixels
+2026-11-17 16:04:29,713 INFO camera: ID 0 | X=0.014 m | Y=-0.059 m | Z=0.226 m | Distance=0.234 m
+2026-11-17 16:04:29,774 INFO camera: Tag width: 169.57 pixels
+2026-11-17 16:04:29,774 INFO camera: ID 0 | X=0.014 m | Y=-0.060 m | Z=0.226 m | Distance=0.235 m
+2026-11-17 16:04:29,834 INFO camera: Tag width: 169.32 pixels
+2026-11-17 16:04:29,834 INFO camera: ID 0 | X=0.013 m | Y=-0.061 m | Z=0.227 m | Distance=0.236 m
+2026-11-17 16:04:29,895 INFO camera: Tag width: 168.43 pixels
+2026-11-17 16:04:29,895 INFO camera: ID 0 | X=0.013 m | Y=-0.063 m | Z=0.228 m | Distance=0.237 m
+2026-11-17 16:04:29,956 INFO camera: Tag width: 168.07 pixels
+2026-11-17 16:04:29,956 INFO camera: ID 0 | X=0.013 m | Y=-0.063 m | Z=0.229 m | Distance=0.238 m
+2026-11-17 16:04:30,021 INFO camera: Tag width: 168.51 pixels
+2026-11-17 16:04:30,021 INFO camera: ID 0 | X=0.013 m | Y=-0.064 m | Z=0.228 m | Distance=0.237 m
+2026-11-17 16:04:30,080 INFO camera: Tag width: 169.96 pixels
+2026-11-17 16:04:30,080 INFO camera: ID 0 | X=0.013 m | Y=-0.064 m | Z=0.226 m | Distance=0.236 m
+2026-11-17 16:04:30,139 INFO camera: Tag width: 170.49 pixels
+2026-11-17 16:04:30,139 INFO camera: ID 0 | X=0.013 m | Y=-0.064 m | Z=0.226 m | Distance=0.235 m
+2026-11-17 16:04:30,199 INFO camera: Tag width: 170.39 pixels
+2026-11-17 16:04:30,199 INFO camera: ID 0 | X=0.013 m | Y=-0.064 m | Z=0.226 m | Distance=0.235 m
+2026-11-17 16:04:30,258 INFO camera: Tag width: 170.63 pixels
+2026-11-17 16:04:30,259 INFO camera: ID 0 | X=0.013 m | Y=-0.064 m | Z=0.226 m | Distance=0.235 m
+2026-11-17 16:04:30,322 INFO camera: Tag width: 170.72 pixels
+2026-11-17 16:04:30,322 INFO camera: ID 0 | X=0.013 m | Y=-0.064 m | Z=0.226 m | Distance=0.235 m
+2026-11-17 16:04:30,384 INFO camera: Tag width: 170.28 pixels
+2026-11-17 16:04:30,385 INFO camera: ID 0 | X=0.013 m | Y=-0.065 m | Z=0.226 m | Distance=0.236 m
+2026-11-17 16:04:30,445 INFO camera: Tag width: 170.41 pixels
+2026-11-17 16:04:30,445 INFO camera: ID 0 | X=0.013 m | Y=-0.065 m | Z=0.226 m | Distance=0.236 m
+2026-11-17 16:04:30,505 INFO camera: Tag width: 170.47 pixels
+2026-11-17 16:04:30,505 INFO camera: ID 0 | X=0.013 m | Y=-0.065 m | Z=0.226 m | Distance=0.236 m
+2026-11-17 16:04:30,625 INFO camera: Tag width: 170.03 pixels
+2026-11-17 16:04:30,625 INFO camera: ID 0 | X=0.013 m | Y=-0.066 m | Z=0.227 m | Distance=0.237 m
+2026-11-17 16:04:30,689 INFO camera: Tag width: 169.55 pixels
+2026-11-17 16:04:30,690 INFO camera: ID 0 | X=0.013 m | Y=-0.067 m | Z=0.227 m | Distance=0.237 m
+2026-11-17 16:04:30,746 INFO camera: Tag width: 169.62 pixels
+2026-11-17 16:04:30,747 INFO camera: ID 0 | X=0.013 m | Y=-0.068 m | Z=0.227 m | Distance=0.238 m
+2026-11-17 16:04:30,876 INFO camera: Tag width: 170.17 pixels
+2026-11-17 16:04:30,877 INFO camera: ID 0 | X=0.013 m | Y=-0.069 m | Z=0.226 m | Distance=0.237 m
+2026-11-17 16:04:30,960 INFO camera: Tag width: 169.47 pixels
+2026-11-17 16:04:30,961 INFO camera: ID 0 | X=0.014 m | Y=-0.069 m | Z=0.228 m | Distance=0.238 m
+2026-11-17 16:04:31,221 INFO camera: Tag width: 168.01 pixels
+2026-11-17 16:04:31,222 INFO camera: ID 0 | X=0.019 m | Y=-0.070 m | Z=0.229 m | Distance=0.240 m
+2026-11-17 16:04:31,279 INFO camera: Tag width: 168.54 pixels
+2026-11-17 16:04:31,280 INFO camera: ID 0 | X=0.019 m | Y=-0.069 m | Z=0.228 m | Distance=0.239 m
+2026-11-17 16:04:31,338 INFO camera: Tag width: 170.23 pixels
+2026-11-17 16:04:31,339 INFO camera: ID 0 | X=0.019 m | Y=-0.069 m | Z=0.226 m | Distance=0.237 m
+2026-11-17 16:04:31,703 INFO camera: Tag width: 179.65 pixels
+2026-11-17 16:04:31,703 INFO camera: ID 0 | X=0.016 m | Y=-0.064 m | Z=0.217 m | Distance=0.226 m
+2026-11-17 16:04:31,761 INFO camera: Tag width: 175.04 pixels
+2026-11-17 16:04:31,761 INFO camera: ID 0 | X=0.018 m | Y=-0.062 m | Z=0.222 m | Distance=0.231 m
+2026-11-17 16:04:31,821 INFO camera: Tag width: 170.54 pixels
+2026-11-17 16:04:31,822 INFO camera: ID 0 | X=0.018 m | Y=-0.061 m | Z=0.227 m | Distance=0.236 m
+2026-11-17 16:04:31,883 INFO camera: Tag width: 167.35 pixels
+2026-11-17 16:04:31,885 INFO camera: ID 0 | X=0.017 m | Y=-0.061 m | Z=0.231 m | Distance=0.240 m
+2026-11-17 16:04:32,071 INFO camera: Tag width: 163.39 pixels
+2026-11-17 16:04:32,071 INFO camera: ID 0 | X=0.012 m | Y=-0.063 m | Z=0.236 m | Distance=0.244 m
+2026-11-17 16:04:32,133 INFO camera: Tag width: 161.24 pixels
+2026-11-17 16:04:32,134 INFO camera: ID 0 | X=0.014 m | Y=-0.058 m | Z=0.239 m | Distance=0.246 m
+2026-11-17 16:04:32,196 INFO camera: Tag width: 155.94 pixels
+2026-11-17 16:04:32,196 INFO camera: ID 0 | X=0.016 m | Y=-0.054 m | Z=0.247 m | Distance=0.253 m
+2026-11-17 16:04:32,259 INFO camera: Tag width: 152.00 pixels
+2026-11-17 16:04:32,259 INFO camera: ID 0 | X=0.017 m | Y=-0.051 m | Z=0.254 m | Distance=0.259 m
+2026-11-17 16:04:32,319 INFO camera: Tag width: 150.41 pixels
+2026-11-17 16:04:32,319 INFO camera: ID 0 | X=0.017 m | Y=-0.051 m | Z=0.257 m | Distance=0.263 m
+2026-11-17 16:04:32,377 INFO camera: Tag width: 149.18 pixels
+2026-11-17 16:04:32,377 INFO camera: ID 0 | X=0.015 m | Y=-0.052 m | Z=0.260 m | Distance=0.266 m
+2026-11-17 16:04:32,434 INFO camera: Tag width: 147.77 pixels
+2026-11-17 16:04:32,434 INFO camera: ID 0 | X=0.014 m | Y=-0.050 m | Z=0.264 m | Distance=0.269 m
+2026-11-17 16:04:32,493 INFO camera: Tag width: 144.89 pixels
+2026-11-17 16:04:32,494 INFO camera: ID 0 | X=0.011 m | Y=-0.046 m | Z=0.270 m | Distance=0.274 m
+2026-11-17 16:04:32,545 INFO camera: Tag width: 144.35 pixels
+2026-11-17 16:04:32,545 INFO camera: ID 0 | X=0.007 m | Y=-0.045 m | Z=0.271 m | Distance=0.275 m
+2026-11-17 16:04:32,600 INFO camera: Tag width: 144.58 pixels
+2026-11-17 16:04:32,600 INFO camera: ID 0 | X=0.006 m | Y=-0.044 m | Z=0.271 m | Distance=0.275 m
+2026-11-17 16:04:32,659 INFO camera: Tag width: 145.65 pixels
+2026-11-17 16:04:32,660 INFO camera: ID 0 | X=0.004 m | Y=-0.043 m | Z=0.270 m | Distance=0.273 m
+2026-11-17 16:04:32,714 INFO camera: Tag width: 147.53 pixels
+2026-11-17 16:04:32,714 INFO camera: ID 0 | X=0.002 m | Y=-0.042 m | Z=0.266 m | Distance=0.269 m
+2026-11-17 16:04:32,776 INFO camera: Tag width: 148.39 pixels
+2026-11-17 16:04:32,776 INFO camera: ID 0 | X=0.003 m | Y=-0.041 m | Z=0.264 m | Distance=0.268 m
+2026-11-17 16:04:32,832 INFO camera: Tag width: 149.39 pixels
+2026-11-17 16:04:32,832 INFO camera: ID 0 | X=0.006 m | Y=-0.038 m | Z=0.262 m | Distance=0.265 m
+2026-11-17 16:04:32,893 INFO camera: Tag width: 150.06 pixels
+2026-11-17 16:04:32,893 INFO camera: ID 0 | X=0.012 m | Y=-0.034 m | Z=0.261 m | Distance=0.263 m
+2026-11-17 16:04:32,956 INFO camera: Tag width: 150.93 pixels
+2026-11-17 16:04:32,956 INFO camera: ID 0 | X=0.018 m | Y=-0.032 m | Z=0.259 m | Distance=0.262 m
+2026-11-17 16:04:33,014 INFO camera: Tag width: 151.48 pixels
+2026-11-17 16:04:33,014 INFO camera: ID 0 | X=0.024 m | Y=-0.031 m | Z=0.258 m | Distance=0.261 m
+2026-11-17 16:04:33,075 INFO camera: Tag width: 151.81 pixels
+2026-11-17 16:04:33,076 INFO camera: ID 0 | X=0.027 m | Y=-0.031 m | Z=0.257 m | Distance=0.261 m
+2026-11-17 16:04:33,134 INFO camera: Tag width: 152.34 pixels
+2026-11-17 16:04:33,134 INFO camera: ID 0 | X=0.032 m | Y=-0.029 m | Z=0.257 m | Distance=0.260 m
+2026-11-17 16:04:33,193 INFO camera: Tag width: 152.98 pixels
+2026-11-17 16:04:33,193 INFO camera: ID 0 | X=0.037 m | Y=-0.029 m | Z=0.255 m | Distance=0.260 m
+2026-11-17 16:04:33,253 INFO camera: Tag width: 154.10 pixels
+2026-11-17 16:04:33,253 INFO camera: ID 0 | X=0.041 m | Y=-0.030 m | Z=0.253 m | Distance=0.258 m
+2026-11-17 16:04:33,311 INFO camera: Tag width: 154.49 pixels
+2026-11-17 16:04:33,311 INFO camera: ID 0 | X=0.045 m | Y=-0.031 m | Z=0.252 m | Distance=0.258 m
+2026-11-17 16:04:33,366 INFO camera: Tag width: 154.44 pixels
+2026-11-17 16:04:33,366 INFO camera: ID 0 | X=0.046 m | Y=-0.031 m | Z=0.252 m | Distance=0.259 m
+2026-11-17 16:04:33,426 INFO camera: Tag width: 154.18 pixels
+2026-11-17 16:04:33,427 INFO camera: ID 0 | X=0.049 m | Y=-0.032 m | Z=0.253 m | Distance=0.260 m
+2026-11-17 16:04:33,482 INFO camera: Tag width: 153.69 pixels
+2026-11-17 16:04:33,482 INFO camera: ID 0 | X=0.051 m | Y=-0.033 m | Z=0.254 m | Distance=0.261 m
+2026-11-17 16:04:33,542 INFO camera: Tag width: 154.11 pixels
+2026-11-17 16:04:33,542 INFO camera: ID 0 | X=0.052 m | Y=-0.034 m | Z=0.253 m | Distance=0.260 m
+2026-11-17 16:04:33,599 INFO camera: Tag width: 154.70 pixels
+2026-11-17 16:04:33,599 INFO camera: ID 0 | X=0.052 m | Y=-0.035 m | Z=0.252 m | Distance=0.259 m
+2026-11-17 16:04:33,659 INFO camera: Tag width: 156.55 pixels
+2026-11-17 16:04:33,659 INFO camera: ID 0 | X=0.051 m | Y=-0.036 m | Z=0.249 m | Distance=0.257 m
+2026-11-17 16:04:33,715 INFO camera: Tag width: 158.12 pixels
+2026-11-17 16:04:33,715 INFO camera: ID 0 | X=0.051 m | Y=-0.037 m | Z=0.247 m | Distance=0.255 m
+2026-11-17 16:04:33,773 INFO camera: Tag width: 158.54 pixels
+2026-11-17 16:04:33,774 INFO camera: ID 0 | X=0.052 m | Y=-0.039 m | Z=0.246 m | Distance=0.254 m
+2026-11-17 16:04:33,835 INFO camera: Tag width: 158.83 pixels
+2026-11-17 16:04:33,835 INFO camera: ID 0 | X=0.053 m | Y=-0.039 m | Z=0.245 m | Distance=0.254 m
+2026-11-17 16:04:33,895 INFO camera: Tag width: 159.42 pixels
+2026-11-17 16:04:33,896 INFO camera: ID 0 | X=0.055 m | Y=-0.040 m | Z=0.245 m | Distance=0.254 m
+2026-11-17 16:04:33,957 INFO camera: Tag width: 159.21 pixels
+2026-11-17 16:04:33,957 INFO camera: ID 0 | X=0.059 m | Y=-0.040 m | Z=0.245 m | Distance=0.255 m
+2026-11-17 16:04:34,015 INFO camera: Tag width: 157.81 pixels
+2026-11-17 16:04:34,015 INFO camera: ID 0 | X=0.062 m | Y=-0.041 m | Z=0.247 m | Distance=0.258 m
+2026-11-17 16:04:34,074 INFO camera: Tag width: 156.70 pixels
+2026-11-17 16:04:34,075 INFO camera: ID 0 | X=0.064 m | Y=-0.042 m | Z=0.249 m | Distance=0.260 m
+2026-11-17 16:04:34,134 INFO camera: Tag width: 154.34 pixels
+2026-11-17 16:04:34,134 INFO camera: ID 0 | X=0.066 m | Y=-0.043 m | Z=0.253 m | Distance=0.265 m
+2026-11-17 16:04:34,193 INFO camera: Tag width: 152.97 pixels
+2026-11-17 16:04:34,194 INFO camera: ID 0 | X=0.067 m | Y=-0.045 m | Z=0.255 m | Distance=0.268 m
+2026-11-17 16:04:34,255 INFO camera: Tag width: 151.61 pixels
+2026-11-17 16:04:34,255 INFO camera: ID 0 | X=0.068 m | Y=-0.047 m | Z=0.257 m | Distance=0.270 m
+2026-11-17 16:04:34,310 INFO camera: Tag width: 150.50 pixels
+2026-11-17 16:04:34,310 INFO camera: ID 0 | X=0.067 m | Y=-0.049 m | Z=0.259 m | Distance=0.272 m
+2026-11-17 16:04:34,370 INFO camera: Tag width: 150.21 pixels
+2026-11-17 16:04:34,371 INFO camera: ID 0 | X=0.066 m | Y=-0.051 m | Z=0.260 m | Distance=0.273 m
+2026-11-17 16:04:34,432 INFO camera: Tag width: 149.55 pixels
+2026-11-17 16:04:34,433 INFO camera: ID 0 | X=0.065 m | Y=-0.052 m | Z=0.261 m | Distance=0.274 m
+2026-11-17 16:04:34,493 INFO camera: Tag width: 148.68 pixels
+2026-11-17 16:04:34,494 INFO camera: ID 0 | X=0.064 m | Y=-0.054 m | Z=0.262 m | Distance=0.275 m
+2026-11-17 16:04:34,553 INFO camera: Tag width: 148.42 pixels
+2026-11-17 16:04:34,553 INFO camera: ID 0 | X=0.063 m | Y=-0.056 m | Z=0.263 m | Distance=0.276 m
+2026-11-17 16:04:34,610 INFO camera: Tag width: 147.88 pixels
+2026-11-17 16:04:34,610 INFO camera: ID 0 | X=0.062 m | Y=-0.057 m | Z=0.264 m | Distance=0.277 m
+2026-11-17 16:04:34,668 INFO camera: Tag width: 147.36 pixels
+2026-11-17 16:04:34,669 INFO camera: ID 0 | X=0.062 m | Y=-0.057 m | Z=0.265 m | Distance=0.278 m
+2026-11-17 16:04:34,729 INFO camera: Tag width: 146.70 pixels
+2026-11-17 16:04:34,729 INFO camera: ID 0 | X=0.061 m | Y=-0.059 m | Z=0.266 m | Distance=0.279 m
+2026-11-17 16:04:34,788 INFO camera: Tag width: 146.40 pixels
+2026-11-17 16:04:34,788 INFO camera: ID 0 | X=0.061 m | Y=-0.059 m | Z=0.266 m | Distance=0.280 m
+2026-11-17 16:04:34,844 INFO camera: Tag width: 145.43 pixels
+2026-11-17 16:04:34,845 INFO camera: ID 0 | X=0.058 m | Y=-0.059 m | Z=0.268 m | Distance=0.280 m
+2026-11-17 16:04:34,905 INFO camera: Tag width: 144.70 pixels
+2026-11-17 16:04:34,906 INFO camera: ID 0 | X=0.056 m | Y=-0.059 m | Z=0.269 m | Distance=0.281 m
+2026-11-17 16:04:34,965 INFO camera: Tag width: 144.43 pixels
+2026-11-17 16:04:34,966 INFO camera: ID 0 | X=0.049 m | Y=-0.058 m | Z=0.269 m | Distance=0.279 m
+2026-11-17 16:04:35,026 INFO camera: Tag width: 145.72 pixels
+2026-11-17 16:04:35,026 INFO camera: ID 0 | X=0.043 m | Y=-0.056 m | Z=0.266 m | Distance=0.275 m
+2026-11-17 16:04:35,081 INFO camera: Tag width: 146.52 pixels
+2026-11-17 16:04:35,082 INFO camera: ID 0 | X=0.038 m | Y=-0.053 m | Z=0.264 m | Distance=0.272 m
+2026-11-17 16:04:35,138 INFO camera: Tag width: 147.22 pixels
+2026-11-17 16:04:35,139 INFO camera: ID 0 | X=0.035 m | Y=-0.049 m | Z=0.263 m | Distance=0.270 m
+2026-11-17 16:04:35,199 INFO camera: Tag width: 147.33 pixels
+2026-11-17 16:04:35,199 INFO camera: ID 0 | X=0.034 m | Y=-0.046 m | Z=0.263 m | Distance=0.269 m
+2026-11-17 16:04:35,259 INFO camera: Tag width: 147.81 pixels
+2026-11-17 16:04:35,259 INFO camera: ID 0 | X=0.033 m | Y=-0.041 m | Z=0.262 m | Distance=0.267 m
+2026-11-17 16:04:35,315 INFO camera: Tag width: 148.72 pixels
+2026-11-17 16:04:35,316 INFO camera: ID 0 | X=0.031 m | Y=-0.036 m | Z=0.261 m | Distance=0.265 m
+2026-11-17 16:04:35,371 INFO camera: Tag width: 149.65 pixels
+2026-11-17 16:04:35,372 INFO camera: ID 0 | X=0.030 m | Y=-0.035 m | Z=0.259 m | Distance=0.263 m
+2026-11-17 16:04:35,428 INFO camera: Tag width: 152.25 pixels
+2026-11-17 16:04:35,428 INFO camera: ID 0 | X=0.029 m | Y=-0.032 m | Z=0.255 m | Distance=0.258 m
+2026-11-17 16:04:35,484 INFO camera: Tag width: 155.20 pixels
+2026-11-17 16:04:35,484 INFO camera: ID 0 | X=0.028 m | Y=-0.030 m | Z=0.250 m | Distance=0.254 m
+2026-11-17 16:04:35,545 INFO camera: Tag width: 156.79 pixels
+2026-11-17 16:04:35,546 INFO camera: ID 0 | X=0.029 m | Y=-0.029 m | Z=0.248 m | Distance=0.251 m
+2026-11-17 16:04:35,605 INFO camera: Tag width: 156.90 pixels
+2026-11-17 16:04:35,606 INFO camera: ID 0 | X=0.031 m | Y=-0.028 m | Z=0.248 m | Distance=0.251 m
+2026-11-17 16:04:35,666 INFO camera: Tag width: 156.46 pixels
+2026-11-17 16:04:35,666 INFO camera: ID 0 | X=0.034 m | Y=-0.027 m | Z=0.248 m | Distance=0.252 m
+2026-11-17 16:04:35,724 INFO camera: Tag width: 155.80 pixels
+2026-11-17 16:04:35,725 INFO camera: ID 0 | X=0.037 m | Y=-0.026 m | Z=0.250 m | Distance=0.254 m
+2026-11-17 16:04:35,785 INFO camera: Tag width: 154.19 pixels
+2026-11-17 16:04:35,786 INFO camera: ID 0 | X=0.041 m | Y=-0.027 m | Z=0.252 m | Distance=0.257 m
+2026-11-17 16:04:35,849 INFO camera: Tag width: 152.06 pixels
+2026-11-17 16:04:35,850 INFO camera: ID 0 | X=0.043 m | Y=-0.028 m | Z=0.256 m | Distance=0.261 m
+2026-11-17 16:04:35,910 INFO camera: Tag width: 150.41 pixels
+2026-11-17 16:04:35,910 INFO camera: ID 0 | X=0.044 m | Y=-0.030 m | Z=0.259 m | Distance=0.264 m
+2026-11-17 16:04:35,969 INFO camera: Tag width: 149.65 pixels
+2026-11-17 16:04:35,969 INFO camera: ID 0 | X=0.044 m | Y=-0.032 m | Z=0.260 m | Distance=0.266 m
+2026-11-17 16:04:36,028 INFO camera: Tag width: 148.76 pixels
+2026-11-17 16:04:36,029 INFO camera: ID 0 | X=0.044 m | Y=-0.034 m | Z=0.261 m | Distance=0.267 m
+2026-11-17 16:04:36,086 INFO camera: Tag width: 148.06 pixels
+2026-11-17 16:04:36,086 INFO camera: ID 0 | X=0.044 m | Y=-0.037 m | Z=0.263 m | Distance=0.269 m
+2026-11-17 16:04:36,152 INFO camera: Tag width: 147.31 pixels
+2026-11-17 16:04:36,153 INFO camera: ID 0 | X=0.042 m | Y=-0.040 m | Z=0.264 m | Distance=0.270 m
+2026-11-17 16:04:36,212 INFO camera: Tag width: 146.36 pixels
+2026-11-17 16:04:36,212 INFO camera: ID 0 | X=0.041 m | Y=-0.043 m | Z=0.265 m | Distance=0.272 m
+2026-11-17 16:04:36,269 INFO camera: Tag width: 145.77 pixels
+2026-11-17 16:04:36,270 INFO camera: ID 0 | X=0.041 m | Y=-0.045 m | Z=0.266 m | Distance=0.273 m
+2026-11-17 16:04:36,327 INFO camera: Tag width: 144.33 pixels
+2026-11-17 16:04:36,327 INFO camera: ID 0 | X=0.041 m | Y=-0.048 m | Z=0.269 m | Distance=0.277 m
+2026-11-17 16:04:36,383 INFO camera: Tag width: 142.72 pixels
+2026-11-17 16:04:36,384 INFO camera: ID 0 | X=0.041 m | Y=-0.051 m | Z=0.272 m | Distance=0.280 m
+2026-11-17 16:04:36,442 INFO camera: Tag width: 141.31 pixels
+2026-11-17 16:04:36,442 INFO camera: ID 0 | X=0.042 m | Y=-0.054 m | Z=0.275 m | Distance=0.283 m
+2026-11-17 16:04:36,499 INFO camera: Tag width: 140.76 pixels
+2026-11-17 16:04:36,499 INFO camera: ID 0 | X=0.043 m | Y=-0.055 m | Z=0.276 m | Distance=0.285 m
+2026-11-17 16:04:36,559 INFO camera: Tag width: 139.74 pixels
+2026-11-17 16:04:36,560 INFO camera: ID 0 | X=0.044 m | Y=-0.058 m | Z=0.278 m | Distance=0.287 m
+2026-11-17 16:04:36,619 INFO camera: Tag width: 139.14 pixels
+2026-11-17 16:04:36,620 INFO camera: ID 0 | X=0.045 m | Y=-0.060 m | Z=0.279 m | Distance=0.289 m
+2026-11-17 16:04:36,678 INFO camera: Tag width: 138.74 pixels
+2026-11-17 16:04:36,679 INFO camera: ID 0 | X=0.046 m | Y=-0.061 m | Z=0.280 m | Distance=0.290 m
+2026-11-17 16:04:36,737 INFO camera: Tag width: 138.51 pixels
+2026-11-17 16:04:36,738 INFO camera: ID 0 | X=0.046 m | Y=-0.062 m | Z=0.281 m | Distance=0.291 m
+2026-11-17 16:04:36,797 INFO camera: Tag width: 138.18 pixels
+2026-11-17 16:04:36,797 INFO camera: ID 0 | X=0.046 m | Y=-0.064 m | Z=0.281 m | Distance=0.292 m
+2026-11-17 16:04:36,853 INFO camera: Tag width: 138.38 pixels
+2026-11-17 16:04:36,854 INFO camera: ID 0 | X=0.046 m | Y=-0.064 m | Z=0.281 m | Distance=0.292 m
+2026-11-17 16:04:36,913 INFO camera: Tag width: 139.01 pixels
+2026-11-17 16:04:36,914 INFO camera: ID 0 | X=0.046 m | Y=-0.064 m | Z=0.280 m | Distance=0.291 m
+2026-11-17 16:04:36,973 INFO camera: Tag width: 139.60 pixels
+2026-11-17 16:04:36,973 INFO camera: ID 0 | X=0.046 m | Y=-0.064 m | Z=0.279 m | Distance=0.290 m
+2026-11-17 16:04:37,031 INFO camera: Tag width: 140.91 pixels
+2026-11-17 16:04:37,031 INFO camera: ID 0 | X=0.046 m | Y=-0.064 m | Z=0.276 m | Distance=0.287 m
+2026-11-17 16:04:37,090 INFO camera: Tag width: 142.42 pixels
+2026-11-17 16:04:37,090 INFO camera: ID 0 | X=0.047 m | Y=-0.063 m | Z=0.273 m | Distance=0.284 m
+2026-11-17 16:04:37,148 INFO camera: Tag width: 143.18 pixels
+2026-11-17 16:04:37,149 INFO camera: ID 0 | X=0.049 m | Y=-0.062 m | Z=0.271 m | Distance=0.283 m
+2026-11-17 16:04:37,204 INFO camera: Tag width: 143.04 pixels
+2026-11-17 16:04:37,204 INFO camera: ID 0 | X=0.051 m | Y=-0.062 m | Z=0.272 m | Distance=0.283 m
+2026-11-17 16:04:37,266 INFO camera: Tag width: 142.89 pixels
+2026-11-17 16:04:37,266 INFO camera: ID 0 | X=0.052 m | Y=-0.061 m | Z=0.272 m | Distance=0.283 m
+2026-11-17 16:04:37,325 INFO camera: Tag width: 142.64 pixels
+2026-11-17 16:04:37,325 INFO camera: ID 0 | X=0.053 m | Y=-0.061 m | Z=0.272 m | Distance=0.284 m
+2026-11-17 16:04:37,380 INFO camera: Tag width: 142.59 pixels
+2026-11-17 16:04:37,381 INFO camera: ID 0 | X=0.054 m | Y=-0.061 m | Z=0.272 m | Distance=0.284 m
+2026-11-17 16:04:37,441 INFO camera: Tag width: 142.49 pixels
+2026-11-17 16:04:37,442 INFO camera: ID 0 | X=0.055 m | Y=-0.061 m | Z=0.272 m | Distance=0.284 m
+2026-11-17 16:04:37,500 INFO camera: Tag width: 142.63 pixels
+2026-11-17 16:04:37,500 INFO camera: ID 0 | X=0.055 m | Y=-0.060 m | Z=0.272 m | Distance=0.284 m
+2026-11-17 16:04:37,561 INFO camera: Tag width: 142.64 pixels
+2026-11-17 16:04:37,561 INFO camera: ID 0 | X=0.055 m | Y=-0.061 m | Z=0.272 m | Distance=0.285 m
+2026-11-17 16:04:37,621 INFO camera: Tag width: 141.86 pixels
+2026-11-17 16:04:37,621 INFO camera: ID 0 | X=0.056 m | Y=-0.062 m | Z=0.274 m | Distance=0.286 m
+2026-11-17 16:04:37,684 INFO camera: Tag width: 141.09 pixels
+2026-11-17 16:04:37,685 INFO camera: ID 0 | X=0.057 m | Y=-0.062 m | Z=0.275 m | Distance=0.288 m
+2026-11-17 16:04:37,743 INFO camera: Tag width: 140.60 pixels
+2026-11-17 16:04:37,744 INFO camera: ID 0 | X=0.058 m | Y=-0.063 m | Z=0.276 m | Distance=0.289 m
+2026-11-17 16:04:37,803 INFO camera: Tag width: 140.61 pixels
+2026-11-17 16:04:37,803 INFO camera: ID 0 | X=0.058 m | Y=-0.063 m | Z=0.276 m | Distance=0.289 m
+2026-11-17 16:04:37,864 INFO camera: Tag width: 140.36 pixels
+2026-11-17 16:04:37,865 INFO camera: ID 0 | X=0.059 m | Y=-0.064 m | Z=0.277 m | Distance=0.290 m
+2026-11-17 16:04:37,927 INFO camera: Tag width: 139.73 pixels
+2026-11-17 16:04:37,927 INFO camera: ID 0 | X=0.060 m | Y=-0.066 m | Z=0.278 m | Distance=0.292 m
+2026-11-17 16:04:37,988 INFO camera: Tag width: 139.20 pixels
+2026-11-17 16:04:37,989 INFO camera: ID 0 | X=0.062 m | Y=-0.067 m | Z=0.279 m | Distance=0.294 m
+2026-11-17 16:04:38,047 INFO camera: Tag width: 138.03 pixels
+2026-11-17 16:04:38,048 INFO camera: ID 0 | X=0.063 m | Y=-0.069 m | Z=0.282 m | Distance=0.297 m
+2026-11-17 16:04:38,106 INFO camera: Tag width: 136.91 pixels
+2026-11-17 16:04:38,106 INFO camera: ID 0 | X=0.065 m | Y=-0.070 m | Z=0.284 m | Distance=0.299 m
+2026-11-17 16:04:38,165 INFO camera: Tag width: 136.65 pixels
+2026-11-17 16:04:38,165 INFO camera: ID 0 | X=0.065 m | Y=-0.070 m | Z=0.285 m | Distance=0.300 m
+2026-11-17 16:04:38,225 INFO camera: Tag width: 136.50 pixels
+2026-11-17 16:04:38,226 INFO camera: ID 0 | X=0.066 m | Y=-0.071 m | Z=0.285 m | Distance=0.301 m
+2026-11-17 16:04:38,290 INFO camera: Tag width: 136.74 pixels
+2026-11-17 16:04:38,291 INFO camera: ID 0 | X=0.065 m | Y=-0.070 m | Z=0.284 m | Distance=0.300 m
+2026-11-17 16:04:38,351 INFO camera: Tag width: 137.26 pixels
+2026-11-17 16:04:38,351 INFO camera: ID 0 | X=0.062 m | Y=-0.070 m | Z=0.284 m | Distance=0.299 m
+2026-11-17 16:04:38,410 INFO camera: Tag width: 137.71 pixels
+2026-11-17 16:04:38,412 INFO camera: ID 0 | X=0.059 m | Y=-0.070 m | Z=0.283 m | Distance=0.297 m
+2026-11-17 16:04:38,470 INFO camera: Tag width: 137.83 pixels
+2026-11-17 16:04:38,470 INFO camera: ID 0 | X=0.057 m | Y=-0.069 m | Z=0.283 m | Distance=0.297 m
+2026-11-17 16:04:38,528 INFO camera: Tag width: 137.51 pixels
+2026-11-17 16:04:38,528 INFO camera: ID 0 | X=0.054 m | Y=-0.067 m | Z=0.283 m | Distance=0.296 m
+2026-11-17 16:04:38,586 INFO camera: Tag width: 136.74 pixels
+2026-11-17 16:04:38,587 INFO camera: ID 0 | X=0.051 m | Y=-0.064 m | Z=0.284 m | Distance=0.296 m
+2026-11-17 16:04:38,647 INFO camera: Tag width: 137.02 pixels
+2026-11-17 16:04:38,648 INFO camera: ID 0 | X=0.047 m | Y=-0.060 m | Z=0.284 m | Distance=0.294 m
+2026-11-17 16:04:38,708 INFO camera: Tag width: 139.01 pixels
+2026-11-17 16:04:38,708 INFO camera: ID 0 | X=0.042 m | Y=-0.054 m | Z=0.280 m | Distance=0.288 m
+2026-11-17 16:04:38,766 INFO camera: Tag width: 140.18 pixels
+2026-11-17 16:04:38,767 INFO camera: ID 0 | X=0.039 m | Y=-0.050 m | Z=0.277 m | Distance=0.285 m
+2026-11-17 16:04:38,826 INFO camera: Tag width: 142.64 pixels
+2026-11-17 16:04:38,827 INFO camera: ID 0 | X=0.034 m | Y=-0.043 m | Z=0.273 m | Distance=0.278 m
+2026-11-17 16:04:38,883 INFO camera: Tag width: 145.20 pixels
+2026-11-17 16:04:38,884 INFO camera: ID 0 | X=0.028 m | Y=-0.035 m | Z=0.268 m | Distance=0.271 m
+2026-11-17 16:04:38,939 INFO camera: Tag width: 148.13 pixels
+2026-11-17 16:04:38,939 INFO camera: ID 0 | X=0.021 m | Y=-0.029 m | Z=0.262 m | Distance=0.265 m
+2026-11-17 16:04:38,996 INFO camera: Tag width: 150.24 pixels
+2026-11-17 16:04:38,997 INFO camera: ID 0 | X=0.018 m | Y=-0.026 m | Z=0.258 m | Distance=0.260 m
+2026-11-17 16:04:39,051 INFO camera: Tag width: 155.61 pixels
+2026-11-17 16:04:39,052 INFO camera: ID 0 | X=0.014 m | Y=-0.020 m | Z=0.250 m | Distance=0.251 m
+2026-11-17 16:04:39,111 INFO camera: Tag width: 161.31 pixels
+2026-11-17 16:04:39,112 INFO camera: ID 0 | X=0.012 m | Y=-0.012 m | Z=0.241 m | Distance=0.242 m
+2026-11-17 16:04:39,167 INFO camera: Tag width: 163.57 pixels
+2026-11-17 16:04:39,167 INFO camera: ID 0 | X=0.012 m | Y=-0.009 m | Z=0.238 m | Distance=0.239 m
+2026-11-17 16:04:39,223 INFO camera: Tag width: 167.17 pixels
+2026-11-17 16:04:39,223 INFO camera: ID 0 | X=0.011 m | Y=-0.002 m | Z=0.233 m | Distance=0.234 m
+2026-11-17 16:04:39,275 INFO camera: Tag width: 172.13 pixels
+2026-11-17 16:04:39,276 INFO camera: ID 0 | X=0.012 m | Y=0.007 m | Z=0.227 m | Distance=0.228 m
+2026-11-17 16:04:39,329 INFO camera: Tag width: 175.34 pixels
+2026-11-17 16:04:39,329 INFO camera: ID 0 | X=0.012 m | Y=0.010 m | Z=0.224 m | Distance=0.224 m
+2026-11-17 16:04:39,385 INFO camera: Tag width: 182.25 pixels
+2026-11-17 16:04:39,385 INFO camera: ID 0 | X=0.012 m | Y=0.018 m | Z=0.216 m | Distance=0.217 m
+2026-11-17 16:04:39,439 INFO camera: Tag width: 189.62 pixels
+2026-11-17 16:04:39,439 INFO camera: ID 0 | X=0.012 m | Y=0.023 m | Z=0.208 m | Distance=0.210 m
+2026-11-17 16:04:39,496 INFO camera: Tag width: 193.21 pixels
+2026-11-17 16:04:39,497 INFO camera: ID 0 | X=0.011 m | Y=0.026 m | Z=0.205 m | Distance=0.207 m
+2026-11-17 16:04:39,554 INFO camera: Tag width: 199.24 pixels
+2026-11-17 16:04:39,554 INFO camera: ID 0 | X=0.011 m | Y=0.030 m | Z=0.199 m | Distance=0.202 m
+2026-11-17 16:04:39,606 INFO camera: Tag width: 203.28 pixels
+2026-11-17 16:04:39,606 INFO camera: ID 0 | X=0.010 m | Y=0.033 m | Z=0.196 m | Distance=0.199 m
+2026-11-17 16:04:39,660 INFO camera: Tag width: 203.90 pixels
+2026-11-17 16:04:39,660 INFO camera: ID 0 | X=0.010 m | Y=0.033 m | Z=0.195 m | Distance=0.198 m
+2026-11-17 16:04:39,719 INFO camera: Tag width: 203.09 pixels
+2026-11-17 16:04:39,719 INFO camera: ID 0 | X=0.009 m | Y=0.033 m | Z=0.196 m | Distance=0.199 m
+2026-11-17 16:04:39,776 INFO camera: Tag width: 199.66 pixels
+2026-11-17 16:04:39,776 INFO camera: ID 0 | X=0.008 m | Y=0.031 m | Z=0.199 m | Distance=0.201 m
+2026-11-17 16:04:39,834 INFO camera: Tag width: 197.67 pixels
+2026-11-17 16:04:39,834 INFO camera: ID 0 | X=0.007 m | Y=0.029 m | Z=0.201 m | Distance=0.203 m
+2026-11-17 16:04:39,893 INFO camera: Tag width: 194.93 pixels
+2026-11-17 16:04:39,894 INFO camera: ID 0 | X=0.005 m | Y=0.025 m | Z=0.203 m | Distance=0.205 m
+2026-11-17 16:04:39,947 INFO camera: Tag width: 192.69 pixels
+2026-11-17 16:04:39,948 INFO camera: ID 0 | X=0.003 m | Y=0.023 m | Z=0.205 m | Distance=0.206 m
+2026-11-17 16:04:40,001 INFO camera: Tag width: 188.55 pixels
+2026-11-17 16:04:40,001 INFO camera: ID 0 | X=0.002 m | Y=0.020 m | Z=0.209 m | Distance=0.210 m
+2026-11-17 16:04:40,057 INFO camera: Tag width: 185.35 pixels
+2026-11-17 16:04:40,058 INFO camera: ID 0 | X=0.002 m | Y=0.018 m | Z=0.212 m | Distance=0.213 m
+2026-11-17 16:04:40,114 INFO camera: Tag width: 179.86 pixels
+2026-11-17 16:04:40,115 INFO camera: ID 0 | X=0.002 m | Y=0.014 m | Z=0.218 m | Distance=0.218 m
+2026-11-17 16:04:40,180 INFO camera: Tag width: 177.76 pixels
+2026-11-17 16:04:40,181 INFO camera: ID 0 | X=0.002 m | Y=0.012 m | Z=0.220 m | Distance=0.221 m
+2026-11-17 16:04:40,238 INFO camera: Tag width: 176.85 pixels
+2026-11-17 16:04:40,239 INFO camera: ID 0 | X=0.002 m | Y=0.011 m | Z=0.221 m | Distance=0.222 m
+2026-11-17 16:04:40,294 INFO camera: Tag width: 175.95 pixels
+2026-11-17 16:04:40,294 INFO camera: ID 0 | X=0.003 m | Y=0.010 m | Z=0.222 m | Distance=0.223 m
+2026-11-17 16:04:40,347 INFO camera: Tag width: 174.20 pixels
+2026-11-17 16:04:40,348 INFO camera: ID 0 | X=0.003 m | Y=0.008 m | Z=0.224 m | Distance=0.225 m
+2026-11-17 16:04:40,403 INFO camera: Tag width: 173.88 pixels
+2026-11-17 16:04:40,404 INFO camera: ID 0 | X=0.003 m | Y=0.008 m | Z=0.225 m | Distance=0.225 m
+2026-11-17 16:04:40,457 INFO camera: Tag width: 174.21 pixels
+2026-11-17 16:04:40,458 INFO camera: ID 0 | X=0.003 m | Y=0.007 m | Z=0.224 m | Distance=0.224 m
+2026-11-17 16:04:40,515 INFO camera: Tag width: 174.31 pixels
+2026-11-17 16:04:40,516 INFO camera: ID 0 | X=0.003 m | Y=0.007 m | Z=0.224 m | Distance=0.224 m
+2026-11-17 16:04:40,569 INFO camera: Tag width: 174.43 pixels
+2026-11-17 16:04:40,570 INFO camera: ID 0 | X=0.002 m | Y=0.007 m | Z=0.224 m | Distance=0.224 m
+2026-11-17 16:04:40,627 INFO camera: Tag width: 174.55 pixels
+2026-11-17 16:04:40,628 INFO camera: ID 0 | X=0.001 m | Y=0.006 m | Z=0.223 m | Distance=0.224 m
+2026-11-17 16:04:40,688 INFO camera: Tag width: 175.43 pixels
+2026-11-17 16:04:40,689 INFO camera: ID 0 | X=0.000 m | Y=0.006 m | Z=0.222 m | Distance=0.222 m
+2026-11-17 16:04:40,745 INFO camera: Tag width: 176.73 pixels
+2026-11-17 16:04:40,745 INFO camera: ID 0 | X=-0.000 m | Y=0.006 m | Z=0.221 m | Distance=0.221 m
+2026-11-17 16:04:40,801 INFO camera: Tag width: 177.01 pixels
+2026-11-17 16:04:40,802 INFO camera: ID 0 | X=-0.000 m | Y=0.006 m | Z=0.220 m | Distance=0.220 m
+2026-11-17 16:04:40,859 INFO camera: Tag width: 177.10 pixels
+2026-11-17 16:04:40,860 INFO camera: ID 0 | X=-0.000 m | Y=0.006 m | Z=0.220 m | Distance=0.220 m
+2026-11-17 16:04:40,913 INFO camera: Tag width: 177.95 pixels
+2026-11-17 16:04:40,914 INFO camera: ID 0 | X=-0.000 m | Y=0.006 m | Z=0.219 m | Distance=0.219 m
+2026-11-17 16:04:40,970 INFO camera: Tag width: 179.44 pixels
+2026-11-17 16:04:40,970 INFO camera: ID 0 | X=0.000 m | Y=0.006 m | Z=0.217 m | Distance=0.217 m
+2026-11-17 16:04:41,024 INFO camera: Tag width: 179.92 pixels
+2026-11-17 16:04:41,024 INFO camera: ID 0 | X=0.000 m | Y=0.006 m | Z=0.216 m | Distance=0.216 m
+2026-11-17 16:04:41,075 INFO camera: Tag width: 180.12 pixels
+2026-11-17 16:04:41,075 INFO camera: ID 0 | X=-0.000 m | Y=0.007 m | Z=0.216 m | Distance=0.216 m
+2026-11-17 16:04:41,131 INFO camera: Tag width: 179.94 pixels
+2026-11-17 16:04:41,131 INFO camera: ID 0 | X=-0.001 m | Y=0.006 m | Z=0.216 m | Distance=0.216 m
+2026-11-17 16:04:41,185 INFO camera: Tag width: 179.41 pixels
+2026-11-17 16:04:41,185 INFO camera: ID 0 | X=-0.001 m | Y=0.006 m | Z=0.217 m | Distance=0.217 m
+2026-11-17 16:04:41,241 INFO camera: Tag width: 179.25 pixels
+2026-11-17 16:04:41,241 INFO camera: ID 0 | X=-0.002 m | Y=0.005 m | Z=0.217 m | Distance=0.217 m
+2026-11-17 16:04:41,299 INFO camera: Tag width: 179.26 pixels
+2026-11-17 16:04:41,299 INFO camera: ID 0 | X=-0.003 m | Y=0.005 m | Z=0.217 m | Distance=0.217 m
+2026-11-17 16:04:41,359 INFO camera: Tag width: 179.38 pixels
+2026-11-17 16:04:41,359 INFO camera: ID 0 | X=-0.003 m | Y=0.005 m | Z=0.216 m | Distance=0.217 m
+2026-11-17 16:04:41,412 INFO camera: Tag width: 179.44 pixels
+2026-11-17 16:04:41,413 INFO camera: ID 0 | X=-0.003 m | Y=0.005 m | Z=0.216 m | Distance=0.216 m
+2026-11-17 16:04:41,467 INFO camera: Tag width: 179.13 pixels
+2026-11-17 16:04:41,468 INFO camera: ID 0 | X=-0.004 m | Y=0.004 m | Z=0.217 m | Distance=0.217 m
+2026-11-17 16:04:41,526 INFO camera: Tag width: 178.84 pixels
+2026-11-17 16:04:41,527 INFO camera: ID 0 | X=-0.004 m | Y=0.004 m | Z=0.217 m | Distance=0.217 m
+2026-11-17 16:04:41,582 INFO camera: Tag width: 178.11 pixels
+2026-11-17 16:04:41,583 INFO camera: ID 0 | X=-0.004 m | Y=0.004 m | Z=0.218 m | Distance=0.218 m
+2026-11-17 16:04:41,638 INFO camera: Tag width: 176.96 pixels
+2026-11-17 16:04:41,639 INFO camera: ID 0 | X=-0.004 m | Y=0.002 m | Z=0.219 m | Distance=0.219 m
+2026-11-17 16:04:41,694 INFO camera: Tag width: 176.40 pixels
+2026-11-17 16:04:41,694 INFO camera: ID 0 | X=-0.004 m | Y=0.002 m | Z=0.219 m | Distance=0.220 m
+2026-11-17 16:04:41,747 INFO camera: Tag width: 175.62 pixels
+2026-11-17 16:04:41,748 INFO camera: ID 0 | X=-0.005 m | Y=0.000 m | Z=0.220 m | Distance=0.220 m
+2026-11-17 16:04:41,804 INFO camera: Tag width: 175.29 pixels
+2026-11-17 16:04:41,804 INFO camera: ID 0 | X=-0.005 m | Y=-0.000 m | Z=0.221 m | Distance=0.221 m
+2026-11-17 16:04:41,858 INFO camera: Tag width: 174.69 pixels
+2026-11-17 16:04:41,858 INFO camera: ID 0 | X=-0.005 m | Y=-0.001 m | Z=0.221 m | Distance=0.221 m
+2026-11-17 16:04:41,915 INFO camera: Tag width: 173.93 pixels
+2026-11-17 16:04:41,916 INFO camera: ID 0 | X=-0.005 m | Y=-0.001 m | Z=0.222 m | Distance=0.222 m
+2026-11-17 16:04:41,971 INFO camera: Tag width: 173.01 pixels
+2026-11-17 16:04:41,971 INFO camera: ID 0 | X=-0.005 m | Y=-0.002 m | Z=0.223 m | Distance=0.223 m
+2026-11-17 16:04:42,027 INFO camera: Tag width: 172.68 pixels
+2026-11-17 16:04:42,028 INFO camera: ID 0 | X=-0.005 m | Y=-0.002 m | Z=0.224 m | Distance=0.224 m
+2026-11-17 16:04:42,086 INFO camera: Tag width: 173.04 pixels
+2026-11-17 16:04:42,086 INFO camera: ID 0 | X=-0.006 m | Y=-0.003 m | Z=0.223 m | Distance=0.223 m
+2026-11-17 16:04:42,142 INFO camera: Tag width: 173.20 pixels
+2026-11-17 16:04:42,143 INFO camera: ID 0 | X=-0.006 m | Y=-0.003 m | Z=0.223 m | Distance=0.223 m
+                                                                                                                                                                                                                                                                                                                                                                                                
