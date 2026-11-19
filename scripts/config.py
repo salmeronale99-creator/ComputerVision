@@ -28,3 +28,24 @@ DRAW_BOX = True
 
 SAVE_LOG = True
 LOG_FILE = "logs/experiment.csv"
+
+# MAVLINK & ROVER CONTROL SETTINGS
+MAVLINK_PORT = "tcp:192.168.2.1:5760" 
+MAVLINK_BAUD = 115200
+
+PWM_NEUTRAL = 1500
+PWM_MAX_DELTA = 300             # Caps speed to 1200-1800 us for safe testing
+
+# Static Offset from Upward Camera Lens to Male Docking Cone (meters)
+CAM_TO_CONE_X = 0.00            # Measure physical X offset on rover
+CAM_TO_CONE_Y = 0.08            # Measure physical Y offset on rover
+
+# PD Control Gains (Tune Kp first, then add Kd to damp overshoot)
+KP_XY = 1.2                     # Proportional gain for lateral/longitudinal chase
+KD_XY = 0.15                    # Derivative gain (tracks plane ground velocity)
+KP_YAW = 0.8                    # Proportional gain for heading alignment
+
+# Docking Tolerances & Safety
+ALIGN_TOLERANCE_M = 0.025       # 2.5 cm capture cone radius
+TRIGGER_ALTITUDE_M = 0.35       # Trigger elevation/lock when plane is within 35 cm
+WATCHDOG_TIMEOUT_S = 0.25       # Neutralize motors if tag is lost > 250 ms
