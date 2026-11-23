@@ -133,11 +133,28 @@ def vision_control_loop():
 
         for tag in tags:
             corners = tag.corners.astype(int)
+
+            # Draws green outline around AprilTag
             for i in range(4):
                 cv2.line(frame, tuple(corners[i]), tuple(corners[(i + 1) % 4]), (0, 255, 0), 2)
 
+            # NEW: Display the corner numbers as 0 1 2 3
+            
+            for i, corner in enumerate(tag.corners):
+                px, py = corner.astype(int)
+
+                cv2.circle(
+                    frame, (px, py), 5,
+                    (0, 255, 255), -1
+                )
+
+            # Draw AprilTag center 
+                
+
             center = tuple(tag.center.astype(int))
             cv2.circle(frame, center, 5, (0, 0, 255), -1)
+
+            # Estimate 3D pose 
 
             success, rvec, tvec = cv2.solvePnP(
                 object_points,
@@ -222,6 +239,10 @@ def vision_control_loop():
 
             cv2.putText(frame, f"ID: {tag.tag_id}", (center[0] + 10, center[1]),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 0, 0), 2)
+
+        print("Tag ID:" , tag.tag_id)
+
+        for i, corner in enumerate(tag.corner)    
 
         # FPS & Telemetry Overlay
         current_time = time.time()
