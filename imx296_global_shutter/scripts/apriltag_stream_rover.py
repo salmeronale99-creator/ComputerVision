@@ -83,10 +83,10 @@ detector = Detector(
 
 half_size = config.TAG_SIZE / 2
 object_points = np.array([
-    [-half_size, -half_size, 0],
-    [ half_size, -half_size, 0],
-    [ half_size,  half_size, 0],
-    [-half_size,  half_size, 0]
+    [-half_size, half_size, 0], # Point 0
+    [ half_size, half_size, 0], # Point 1
+    [ half_size, -half_size, 0], # Point 2
+    [-half_size, -half_size, 0] # Point 3
 ], dtype=np.float32)
 
 # ============================================================
