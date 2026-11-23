@@ -19,7 +19,7 @@ CAMERA_HEIGHT = 1088
 TAG_FAMILY = "tag36h11"
 
 # Physical size of the BLACK square (meters)
-TAG_SIZE = 0.1695
+TAG_SIZE = 0.0762
 
 
 SHOW_FPS = True

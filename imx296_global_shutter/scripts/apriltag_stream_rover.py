@@ -52,7 +52,7 @@ mapY = calibration["mapY_cv"].astype(np.float32)
 
 camera_matrix = calibration["K"].astype(np.float64)
 
-dist_coeffs = np.zeros((4,1), dtype = np.float64)
+dist_coeffs = np.zeros((4,1), dtype = np.float64) ## make sure to rectify each camera frame before detecting Apriltags and calculating 3D poses
 
 print("MATLAB fisheye calibration loaded.")
 print("Camera matrix:")
@@ -109,8 +109,23 @@ def vision_control_loop():
     last_log_time = time.time()
 
     while vision_running:
-        frame = picam2.capture_array()
+        # Capture frame
+        frame = picam2.capture_array() 
+
+        #Apply fisheye rectification
+        frame = cv2.remap(
+            frame,
+            mapX,
+            mapY,
+            interpolation=cv2.INTER_LINEAR,
+            borderMode=cv2.BORDER_CONSTANT
+        )
+
+        #Convert to grayscale
+
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        
+        # Detect AprilTags
         tags = detector.detect(gray)
 
         x, y, z = 0.0, 0.0, 0.0
@@ -151,11 +166,47 @@ def vision_control_loop():
                     [0, axis_length, 0],
                     [0, 0, -axis_length]
                 ])
-                img_axes, _ = cv2.projectPoints(axis_points, rvec, tvec, camera_matrix, dist_coeffs)
+
+                # Fix coordinates axis
+
+                axis_length = config.TAG_SIZE / 2
+
+                axis_points = np.float32([
+                    [0, 0, 0],
+                    [axis_length, 0, 0],
+                    [0,axis_length, 0],
+                    [0, 0, -axis_length]
+                ])
+
+                img_axes, _ = cv2.projectPoints(
+                    axis_points,
+                    rvec,
+                    tvec,
+                    camera_matrix,
+                    dist_coeffs
+                )
+
                 img_axes = img_axes.reshape(-1, 2).astype(int)
-                cv2.line(frame, tuple(img_axes[0]), tuple(img_axes[1]), (0, 0, 255), 3)
-                cv2.line(frame, tuple(img_axes[0]), tuple(img_axes[2]), (0, 255, 0), 3)
-                cv2.line(frame, tuple(img_axes[0]), tuple(img_axes[3]), (255, 0, 0), 3)
+
+                origin = tuple(img_axes[0]
+                )
+
+                # X axis - Red
+                cv2.line(frame, origin, tuple[img_axes[1], (0, 0, 0 255), 3])
+
+                # Y axis - Green
+                cv2.line(frame, origin, tuple(img_axes[2]), (0, 255, 0), 3)
+
+                # Z axis - Blue
+
+                cv2.line(frame, origin, tuple(img_axes[3]), (255, 0, 0), 3)
+                
+
+                
+
+                
+
+                
 
                 # Log to CSV once per second
                 now = time.time()
