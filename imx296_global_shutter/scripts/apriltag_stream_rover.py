@@ -209,7 +209,7 @@ def vision_control_loop():
                 )
 
                 # X axis - Red
-                cv2.line(frame, origin, tuple[img_axes[1], (0, 0, 0 255), 3])
+                cv2.line(frame, origin, tuple[img_axes[1], (0, 0, 0, 255), 3])
 
                 # Y axis - Green
                 cv2.line(frame, origin, tuple(img_axes[2]), (0, 255, 0), 3)
@@ -242,7 +242,8 @@ def vision_control_loop():
 
         print("Tag ID:" , tag.tag_id)
 
-        for i, corner in enumerate(tag.corner)    
+        for i, corner in enumerate(tag.corner):
+            print(f"Corner {i}: {corner}")   
 
         # FPS & Telemetry Overlay
         current_time = time.time()
