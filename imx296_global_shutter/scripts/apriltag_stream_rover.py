@@ -17,12 +17,12 @@ from rover_controller import RoverController
 # PROJECT PATHS
 # ============================================================
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CAMERA = "module3"  # ai_camera, module3, module3Wide
+
 
 TEMPLATE_FOLDER = os.path.join(BASE_DIR, "templates")
-CALIBRATION_FOLDER = os.path.join(BASE_DIR, "calibration", CAMERA)
+CALIBRATION_FOLDER = os.path.join(BASE_DIR, "calibration")
 LOG_FOLDER = os.path.join(BASE_DIR, "logs")
-os.makedirs(LOG_FOLDER, exist_ok=True)
+os.makedirs(LOG_FOLDER, exist_ok=True) # creates log folder
 
 CSV_FILE = os.path.join(LOG_FOLDER, "apriltag_measurements.csv")
 if not os.path.exists(CSV_FILE):
@@ -35,9 +35,34 @@ app = Flask(__name__, template_folder=TEMPLATE_FOLDER)
 # ============================================================
 # LOAD CAMERA CALIBRATION & START CAMERA
 # ============================================================
-camera_matrix = np.load(os.path.join(CALIBRATION_FOLDER, "cameraMatrix.npy"))
-dist_coeffs = np.load(os.path.join(CALIBRATION_FOLDER, "distCoeffs.npy"))
-print("Camera calibration loaded.")
+
+#### Get Fisheye Calibration
+
+from scipy.io import loadmat
+
+calibration_path = os.path.join(
+    CALIBRATION_FOLDER,
+    "opencv_rectification.mat"
+)
+
+calibration = loadmat(calibration_path)
+
+mapX = calibration["mapX_cv"].astype(np.float32)
+mapY = calibration["mapY_cv"].astype(np.float32)
+
+camera_matrix = calibration["K"].astype(np.float64)
+
+dist_coeffs = np.zeros((4,1), dtype = np.float64)
+
+print("MATLAB fisheye calibration loaded.")
+print("Camera matrix:")
+print(camera_matrix)
+
+##########
+
+#camera_matrix = np.load(os.path.join(CALIBRATION_FOLDER, "cameraMatrix.npy"))
+#dist_coeffs = np.load(os.path.join(CALIBRATION_FOLDER, "distCoeffs.npy"))
+#print("Camera calibration loaded.")
 
 picam2 = Picamera2()
 camera_config = picam2.create_preview_configuration(
