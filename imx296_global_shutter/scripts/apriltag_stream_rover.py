@@ -200,9 +200,9 @@ def vision_control_loop():
                 # Z axis - Blue
 
                 cv2.line(frame, origin, tuple(img_axes[3]), (255, 0, 0), 3)
-                
 
-                
+
+                # Coordinate axes will be drawn from the center of the AprilTag
 
                 
 
